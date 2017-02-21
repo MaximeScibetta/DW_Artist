@@ -1,2 +1,20 @@
+/************/
 /***IMPORT***/
+/************/
+
+/***generic***/
 @import 'generic/reset';
+/***base***/
+@import 'base/forms';
+@import 'base/headings';
+@import 'base/links';
+/****components***/
+@import 'components/pageFooter';
+@import 'components/pageHeader';
+@import 'components/siteNav';
+/****settings***/
+@import 'settings/colors';
+@import 'settings/fontFace';
+@import 'settings/global';
+/****trumps***/
+@import 'trumps/hideText';
