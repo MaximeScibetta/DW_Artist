@@ -71,3 +71,16 @@
     font-family: 'Oswald-SemiBold';
     src:url('../fonts/Oswald/Oswald-SemiBold.ttf') format('truetype');
 }
+
+@font-face{
+    font-family: 'icon';
+    src:url('../fonts/socicon/socicon.ttf') format('truetype');
+    src:url('../fonts/socicon/socicon.eot');
+    src:url('../fonts/socicon/socicon.svg') format('svg');
+    src:url('../fonts/socicon/socicon.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Baskerville';
+    src:url('../fonts/libre_baskerville.ttf') format('truetype');
+}

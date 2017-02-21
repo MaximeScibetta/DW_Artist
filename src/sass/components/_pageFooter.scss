@@ -1,0 +1,32 @@
+footer{
+    font-family: 'icon';
+}
+.social-media{
+    width: 100%;
+    margin: 100px auto 25px;
+    text-align: center;
+}
+footer a{
+    font-size: $font-lvl1;
+    color: #fff;
+    text-decoration: none;
+    margin:0 50px;
+}
+footer a:hover, footer a:focus{
+    color: $bleu3;
+}
+footer a.facebook:before {
+  content: "\e041";
+}
+footer a.google:before {
+  content: "\e042";
+}
+footer a.instagram:before {
+  content: "\e057";
+}
+footer a.pinterest:before {
+  content: "\e043";
+}
+footer a.blog:before {
+  content: "\e020";
+}

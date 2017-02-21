@@ -2,19 +2,73 @@
 /***IMPORT***/
 /************/
 
-/***generic***/
+/****generic****/
 @import 'generic/reset';
-/***base***/
-@import 'base/forms';
-@import 'base/headings';
-@import 'base/links';
-/****components***/
-@import 'components/pageFooter';
-@import 'components/pageHeader';
-@import 'components/siteNav';
 /****settings***/
 @import 'settings/colors';
 @import 'settings/fontFace';
 @import 'settings/global';
-/****trumps***/
+/****base****/
+@import 'base/forms';
+@import 'base/headings';
+@import 'base/links';
+/****components****/
+@import 'components/pageFooter';
+@import 'components/pageHeader';
+@import 'components/siteNav';
+/****trumps****/
 @import 'trumps/hideText';
+
+/***********/
+/****CSS****/
+/***********/
+
+/****body****/
+.wrapper{
+    margin: 0 auto;
+    max-width: 2000px;
+}
+body{
+    margin:0 50px;
+    background-color: $bleu2;
+    color: #fff;
+    font-family: $oswaldLight;
+    line-height: 1.5;
+}
+.biography p{
+    font-family: 'baskerville';
+    font-size: $font-content;
+    margin-top: 20px;
+}
+article{
+    display:flex;
+    flex-flow: row nowrap;
+    //align-items: center;
+    justify-content:flex-start;
+}
+.biography{
+    max-width: 1000px;
+    border-left:5px $bleu1 solid;
+    padding-left:20px;
+    flex:1.2;
+    align-self: flex-start;
+}
+dl{
+    font-size: $font-content;
+    flex:1;
+    margin-top: 50px;
+    margin-left: 50px;
+    max-width: 500px;
+    background-color: $bleu3;
+    padding:0 15px;
+}
+dt:not(:first-child){
+    margin-top: 50px;
+}
+dt{
+    font-size: $font-lvl1;
+    margin-top:20px;
+}
+dd{
+    margin:20px 0 0 20px;
+}
