@@ -12,7 +12,8 @@ var gulp = require( "gulp" ),
     autoprefixer = require( "gulp-autoprefixer" ),
     csso = require( "gulp-csso" ), 
     babel = require( "gulp-babel" ),
-    htmlmin = require("gulp-htmlmin");
+    htmlmin = require( "gulp-htmlmin" ),
+    sourcemaps = require( "gulp-sourcemaps" );
 
 // --- Task for images
 gulp.task( "images", function() {
@@ -40,7 +41,13 @@ gulp.task( "css", function() {
 // --- Task for js
 gulp.task( "js", function() {
     gulp.src( "src/js/**/*.js" )
+        .pipe( sourcemaps.init() )
         .pipe( babel() )
+        .on( "error", function( oError ) {
+            console.error( oError );
+            this.emit( "end" );
+        } )
+        .pipe( sourcemaps.write() )
         .pipe( gulp.dest( "assets/js" ) );
 } );
 
