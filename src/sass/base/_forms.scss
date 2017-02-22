@@ -3,30 +3,8 @@ form label,
 form{
     display: block;
 }
-form{
-    background-color: $bleu3;
-    display: block;
-    padding: 50px;
-    margin:100px auto 0;
-    width: 400px;
-}
-label, #submit{
-    margin-top: 25px;
-    font-size: $font-lvl1;
-}
-input, textarea{
-    padding: 10px;
-    border:none;
-    min-width: 300px;
-    color: $bleu3;
-}
 
-input:focus, textarea:focus{
-    background-color: $bleu3;
-    color: $bleu1;
-}
-legend{
-    font-size: $font-lvl2;
-    text-transform: uppercase;
-    line-height: 1;
+input, textarea{
+    padding: $spacing-unit;
+    border:none;
 }

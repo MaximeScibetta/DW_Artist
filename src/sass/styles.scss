@@ -8,6 +8,8 @@
 @import 'settings/colors';
 @import 'settings/fontFace';
 @import 'settings/global';
+/****generic****/
+@import 'generic/normalize';
 /****base****/
 @import 'base/headings';
 @import 'base/links';
@@ -15,6 +17,7 @@
 /****components****/
 @import 'components/pageFooter';
 @import 'components/pageHeader';
+@import 'components/pageContact';
 @import 'components/siteNav';
 /****trumps****/
 @import 'trumps/hideText';
@@ -28,17 +31,16 @@
     margin: 0 auto;
     max-width: 2000px;
 }
+.content{
+    margin: 0 $spacing-el;
+}
 body{
-    margin:0 50px;
     background-color: $bleu2;
     color: #fff;
     font-family: $oswaldLight;
-    line-height: 1.5;
 }
 .biography p{
     font-family: 'baskerville';
-    font-size: $font-content;
-    margin-top: 20px;
 }
 article{
     display:flex;
@@ -56,14 +58,13 @@ article{
 dl{
     font-size: $font-content;
     flex:1;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin: $spacing-el 0 0 $spacing-el;
     max-width: 500px;
     background-color: $bleu3;
     padding:0 15px;
 }
 dt:not(:first-child){
-    margin-top: 50px;
+    margin-top: $spacing-el;
 }
 dt{
     font-size: $font-lvl1;

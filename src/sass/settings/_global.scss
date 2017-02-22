@@ -1,4 +1,12 @@
-$font-base: 0.625em;
+$font-base: 1em;
+$font-micro: 0.707em;
+$font-content: 1.414em;
+$font-lvl1: 1.999em;
+$font-lvl2: 2.828em;
+$font-lvl3: 3.998em;
+
+$spacing-unit: 10px;
+$spacing-el: 50px;
 
 $oswaldELight: "Oswald-ExtraLight", "SourceSansPro-ExtraLight", sans-serif;
 $oswaldLight: "Oswald-Light", "SourceSansPro-Light", sans-serif;
@@ -8,3 +16,4 @@ $oswaldBold: "Oswald-Bold", "SourceSansPro-Bold", sans-serif;
 $sspLight: "SourceSansPro-Light", "Oswald-Light", sans-serif;
 $sspRegular: "SourceSansPro-Regular", "Oswald-Regular", sans-serif;
 $sspBold: "SourceSansPro-Bold", "Oswald-Bold", sans-serif;
+
