@@ -1,7 +1,8 @@
 footer{
-    font-family: 'icon';
+    
 }
 .social-media{
+    font-family: 'icon';
     width: 100%;
     margin: 100px auto 25px;
     text-align: center;
@@ -10,7 +11,7 @@ footer a{
     font-size: $font-lvl1;
     color: #fff;
     text-decoration: none;
-    margin:0 50px;
+    margin:0 $spacing-el;
 }
 footer a:hover, footer a:focus{
     color: $bleu3;
