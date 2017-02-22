@@ -8,16 +8,16 @@
 
 .m{
     display: block;
-    width: 232px;
-    height: 500px;
+    width: 730px;
+    height: 650px;
     position: relative;
         //float: right;
         margin:0 auto;
     padding: 0 30px 0 40px;
     margin-top: 40px;
-    box-shadow: -10px 0 0 #D6D6D6;
+    //box-shadow: -10px 0 0 #D6D6D6;
     .li{
-        display: block;
+        display: inline-block;
         width:  100px;
         height: 100px;
         position: relative;
@@ -28,6 +28,8 @@
         //background-color: #55BFE2;
         outline: none;
         cursor: pointer;
+        position:absolute;
+        bottom:0;
         &:focus img{
             opacity: .3;
         }
@@ -49,9 +51,10 @@
 .cube-wrap{
     width:  500px;
     height: 500px;
-    position: absolute;
-    top: 0;
-    right: 400px;
+    //position: absolute;
+    //top: 0;
+    //right: 400px;
+        margin: 0 auto;
     perspective: 1000px;
 }
     
@@ -129,4 +132,19 @@
 }
 
 .m6:focus ~ .cube-wrap .cube{
-    transform: translateZ(-250px) rotateX(180deg);}
+    transform: translateZ(-250px) rotateX(180deg);
+}
+
+.m1{
+    left: 0;
+}.m2{
+    left: 125px;
+}.m3{
+    left: 250px;
+}.m4{
+    left: 375px;
+}.m5{
+    left: 500px;
+}.m6{
+    left: 625px;
+}
