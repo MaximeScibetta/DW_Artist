@@ -1,0 +1,73 @@
+// $base-font-size:    16px;
+// $base-line-height:  1.5;
+
+// // this value may vary for each font
+// // unitless value relative to 1em
+// $cap-height:        0.68;
+
+
+// @mixin baseline($font-size, $scale: 2) {
+
+//     // rhythm unit
+//     $rhythm: $base-line-height * $font-size / $scale;
+
+//     // number of rhythm units that can fit the font-size
+//     $lines: ceil(($font-size + 0.001px) / $rhythm);
+
+//     // calculate the new line-height
+//     $line-height: $rhythm * $lines / $font-size;
+
+//     // use the results
+//     //font-size: $font-size;
+//     //line-height: $line-height;
+
+//     $baseline-distance: ($line-height - $cap-height) / 2;
+
+
+
+//     // METHOD 1
+//     /////////////////
+
+//     // this method can relatively move down elements you may not want to
+//     // position: relative;
+//     // top: $baseline-distance + em;
+
+
+
+//     // METHOD 2
+//     /////////////////
+
+//     // if you use this mixin only on elements that have one direction margins
+//     // http://csswizardry.com/2012/06/single-direction-margin-declarations/
+//     // you can use this method with no worries. 
+//     // this method assumes the direction is down and the margin is $base-line-height
+//     padding-top: $baseline-distance + em;
+//     margin-bottom: $base-line-height - $baseline-distance + em;
+// }
+
+/* ************ MIXINS ************ */
+
+//Adds font-size in rem & px
+//Value passed should be the expected px size
+//Default value 12 - can be customized to fit project
+@mixin font-size($sizeValue: 16 ){
+    font-size: $sizeValue + px; //fallback for old browsers
+    font-size: (0.0625 * $sizeValue) + rem;
+
+}
+
+//Adds line-height in rem & px
+//Value passed should be the expected px size
+//Default value 20 - can be customized to fit project
+@mixin line-height($heightValue: 24 ){
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: (0.0625 * $heightValue) + rem;
+}
+
+//Rhythm adds font-size and line-height in rem with a px fallback
+//Value passed should be the expected px size
+//Default values 12, 20 - can be customized to fit project
+@mixin rhythm($sizeValue: 16, $heightValue: 24) {
+    @include font-size($sizeValue);
+    @include line-height($heightValue);
+}

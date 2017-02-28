@@ -10,3 +10,22 @@ h3{
 p{
     font-size: $font-content;
 }
+
+// h1{
+//     @include rhythm(63.968, 95.952);
+//     //font-size: $font-lvl3;
+//     //@include baseline(63.968, 3);
+// }
+// h2{
+//     @include rhythm(45.248, 67.872);
+//     //font-size: $font-lvl2;
+//     //@include baseline(45.248, 2);
+// }
+// h3{
+//     @include rhythm(31.984, 47.976);
+//     //font-size: $font-lvl1;
+// }
+// p{
+//     @include rhythm(22.624, 33.936);
+//     //font-size: $font-content;
+// }

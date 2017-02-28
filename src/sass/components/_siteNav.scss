@@ -28,7 +28,9 @@ nav {
 }
 
 .nav-effect  {
-    position: relative;
+    //position: relative;
+    display: inline-block;
+    margin-left: $spacing-el * 2;
 }
 
 .nav-effect a {
