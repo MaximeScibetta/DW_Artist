@@ -55,25 +55,23 @@ gulp.task( "js", function() {
 
 // --- Task for html
 gulp.task('html', function() {
-    gulp.src('src/html/**/*.html')
+    gulp.src('src/html/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest("assets/html"));
 });
 gulp.task('htmli', function() {
-    gulp.src('src/html/**/index.html')
+    gulp.src('src/html/index/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest("assets"));
 });
 
 // --- Task for browser-sync
 gulp.task('serve', ['css'], function() {
+
     browserSync.init({
-        server: {
-            baseDir: "./assets"
-        }
+        server: "./assets"
     });
-    gulp.watch("src/sass/**/*.scss", ['css']);
-    gulp.watch("src/html/*.html").on('change', browserSync.reload);
+    
 });
 
 // --- Watch tasks
@@ -83,6 +81,7 @@ gulp.task( "watch", function() {
     gulp.watch( "src/html/**/*.html", [ "html" ] );
     gulp.watch( "src/html/**/index.html", [ "htmli" ] );
     gulp.watch( "src/js/**/*.js", [ "js" ] );
+    gulp.watch("src/html/**/*.html").on('change', browserSync.reload);
 } );
 
 // --- Aliases

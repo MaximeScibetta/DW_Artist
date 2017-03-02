@@ -10,13 +10,12 @@ footer{
     text-align: center;
 }
 footer a{
-    font-size: $font-lvl1;
-    color: #fff;
+    @include rhythm($font-lvl1, 72);
     text-decoration: none;
     margin:0 $spacing-el;
 }
 footer a:hover, footer a:focus{
-    color: $bleu3;
+    color: $hover-color;
 }
 footer a.facebook:before {
   content: "\e041";

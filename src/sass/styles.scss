@@ -39,8 +39,8 @@
 }
 
 body{
-    background-color: $bleu2;
-    color: #fff;
+    background-color: $base-bcg-color;
+    color: $bleu3;
     font-family: $oswaldLight;
 }
 .home article{
@@ -52,34 +52,50 @@ body{
 }
 .biography{
     max-width: 1000px;
-    border-left:5px $bleu1 solid;
+    border-left:5px $bleu3 solid;
     padding-left:20px;
     flex:1.2;
     align-self: flex-start;
     p{
         font-family: 'baskerville';
     }
+    p:first-child{
+        margin-top: 25px;
+    }
 }
 dl{
-    font-size: $font-content;
+    @include rhythm($font-content, 36);
     flex:2;
-    margin: 0 0 0 10%;
-    max-width: 500px;
-    background-color: $bleu3;
+    margin: 0 0 0 5%;
+    max-width: 1000px;
+    min-width: 900px;
     padding:0 15px;
+    background-image: url('../images/portrait6.JPG');
+    background-position-x: -50px;
+    color: $bleu3;
+    font-family: $oswaldRegular;
 }
 dt:not(:first-child){
-    margin-top: $spacing-el;
+    margin-top: $spacing-unit*6;
 }
 dt{
-    font-size: $font-lvl1;
+    @include rhythm($font-lvl1, 72);
     margin-top:20px;
 }
 dd{
-    margin:20px 0 0 20px;
+    margin:$spacing-unit*3 0 0 $spacing-unit*2;
+    max-width: 500px;
 }
 dd:last-child{
-    margin-bottom: 30px;
+    margin-bottom: $spacing-el;
+}
+/****Forms****/
+.contact{
+    & legend, label{
+        color: #fff;   
+    }
+
+   
 }
 /****Events****/
 
@@ -113,4 +129,11 @@ hr{
     width: 500px;
     margin: $spacing-el auto;
     border: 1px solid $bleu1;
+}
+
+.here{
+    display: block;
+}
+.nothere{
+    display: none;
 }

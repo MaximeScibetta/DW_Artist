@@ -5,7 +5,7 @@ form.contact{
     width: 400px;
     
     label, #submit{
-        margin-top: 25px;
+        margin-top: $spacing-unit;
         font-size: $font-lvl1;
     }
     input, textarea{

@@ -1,14 +1,19 @@
 h1{
-    font-size: $font-lvl3;
+    @include rhythm($font-lvl3, 144);
+    //font-size: $font-lvl3;
 }
 h2{
-    font-size: $font-lvl2;
+    @include rhythm($font-lvl2, 108);
+    //font-size: $font-lvl2;
 }
 h3{
-    font-size: $font-lvl1;
+    @include rhythm($font-lvl1, 72);
+    //font-size: $font-lvl1;
 }
 p{
-    font-size: $font-content;
+    @include rhythm($font-content, 36);
+    margin-top: 36px;
+    //font-size: $font-content;
 }
 
 // h1{
