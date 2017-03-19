@@ -60,42 +60,62 @@ body{
         font-family: 'baskerville';
     }
     p:first-child{
-        margin-top: 25px;
+        margin-top: 8px;
     }
 }
 dl{
-    @include rhythm($font-content, 36);
-    flex:2;
-    margin: 0 0 0 5%;
-    max-width: 1000px;
-    min-width: 900px;
+   // flex:2;
+    margin: 0 0 0 10%;
+    //max-width: 1000px;
+    //min-width: 900px;
     padding:0 15px;
-    background-image: url('../images/portrait6.JPG');
-    background-position-x: -50px;
+    //background-image: url('../images/portrait6.JPG');
+    //background-position-x: -50px;
+    background-color: $bleu2;
     color: $bleu3;
     font-family: $oswaldRegular;
+}
+dt:first-child{
+
 }
 dt:not(:first-child){
     margin-top: $spacing-unit*6;
 }
 dt{
     @include rhythm($font-lvl1, 72);
-    margin-top:20px;
+    //margin-top:20px;
 }
 dd{
+    @include rhythm($font-content, 36);
     margin:$spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
 }
 dd:last-child{
     margin-bottom: $spacing-el;
 }
+/****Gallery****/
+.nav{
+    text-align: center;
+    li{
+        display: inline-block;
+        margin-right: $spacing-unit;
+        @include rhythm($font-content, 36);
+        padding:$spacing-unit/2 $spacing-unit/2;
+            &.active{
+            background-color: $litle-elements;
+            border-radius: 5px;
+                a{
+                  color: #fff;  
+                }
+            }
+    }
+    
+}
 /****Forms****/
 .contact{
     & legend, label{
         color: #fff;   
     }
-
-   
 }
 /****Events****/
 
@@ -106,7 +126,7 @@ dd:last-child{
     text-align: center;
     h2{
         text-transform: uppercase;
-        margin-bottom: $spacing-el/2;
+        margin-bottom: $spacing-unit*3;
     }
     a{
         text-transform: uppercase;
@@ -118,17 +138,16 @@ dd:last-child{
     }
     span{
     display: block;
-    font-size: $font-base;
+    @include rhythm($font-content, 36);
     font-family: 'baskerville';
-    margin-bottom: $spacing-unit;
     }
 }
 
 hr{
     //display: block;
     width: 500px;
-    margin: $spacing-el auto;
-    border: 1px solid $bleu1;
+    margin: $spacing-unit*3 auto;
+    border: 1px solid $litle-elements;
 }
 
 .here{
