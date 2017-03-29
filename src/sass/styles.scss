@@ -10,6 +10,7 @@
 @import 'settings/colors';
 @import 'settings/fontFace';
 @import 'settings/global';
+
 /****generic****/
 @import 'generic/normalize';
 /****base****/
@@ -24,7 +25,7 @@
 @import 'components/siteNav';
 /****trumps****/
 @import 'trumps/hideText';
-
+@import 'settings/responsive';
 /***********/
 /****CSS****/
 /***********/
@@ -37,48 +38,105 @@
     margin: 0 $spacing-el;
     }
 }
+@media (max-width: 955px){
+    .wrapper__content{
+        margin: 0 20px;
+    }
+}
 
 body{
     background-color: $base-bcg-color;
     color: $bleu3;
     font-family: $oswaldLight;
 }
-.home article{
-    display:flex;
-    flex-flow: row nowrap;
-    //align-items: center;
-    //justify-content:flex-start;
-    align-items: flex-start;
+@media (min-width:1439px){
+    .home article{
+        display:flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+    dl{
+        margin: 0 0 0 10%;
+        padding:0 15px;
+        background-color: $bleu2;
+        color: $bleu3;
+        font-family: $oswaldRegular;
+    span{
+        display: block;
+        height: 400px;
+        background-image: url(../images/profil.jpg);
+            background-position-y: -110px;
+        background-size: cover;
+        margin: 0 -15px 0 -15px;
+        }
+    }
 }
-.biography{
+@media (max-width:1440px){
+    .home article{
+        position: relative;
+    }
+    .biography{
+        margin: 0 auto;
+    }
+    dl{
+       margin: 100px 0 0;
+       background-color: $bleu2;
+        color: $bleu3;
+        font-family: $oswaldRegular;
+        max-width: 1000px;
+        padding: 0 15px;
+        span{
+            display: block;
+            height: 589px;
+            background-image: url(../images/profil.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 -15px 0 -15px;
+        }
+        dd:last-child{
+                padding-bottom: 48px;
+            }
+    }
+    .container-media{
+        display: block;
+    }
+    .container-screen{
+        display: none;
+    }
+}
+@media (min-width:1440px){
+    .container-media{
+        display: none;
+    }
+}
+@media (max-width:1576px){
+    dl{
+        margin:0 0 0 5%;  
+    }
+}
+@media (max-width:1440px){
+    dl{
+        margin: 100px auto 0;
+    }
+}
+    .biography{
     max-width: 1000px;
     border-left:5px $bleu3 solid;
     padding-left:20px;
     flex:1.2;
     align-self: flex-start;
-    p{
-        font-family: 'baskerville';
+        p{
+            font-family: 'baskerville';
+        }
+        p:first-child{
+            margin-top: 13px;
+        }
     }
-    p:first-child{
-        margin-top: 13px;
-    }
+    
+dt:first-of-type{
+    margin-top: ($spacing-unit)+2;
 }
-dl{
-   // flex:2;
-    margin: 0 0 0 10%;
-    //max-width: 1000px;
-    //min-width: 900px;
-    padding:0 15px;
-    //background-image: url('../images/portrait6.JPG');
-    //background-position-x: -50px;
-    background-color: $bleu2;
-    color: $bleu3;
-    font-family: $oswaldRegular;
-}
-dt:first-child{
-    margin-top: 18px;
-}
-dt:not(:first-child){
+dt:not(:first-of-type){
     margin-top: ($spacing-unit*4)-4;
 }
 dt{
@@ -96,11 +154,69 @@ dd:not(:first-of-type){
     margin:$spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
 }
-dd:nth-child(5){
+dd:nth-child(6){
  margin-top: ($spacing-unit*2)+4;
 }
 dd:last-child{
     margin-bottom: $spacing-el;
+}
+/*galery home*/
+
+.container-screen, .container-media{
+	margin: 100px auto 50px auto;
+	width: 200px;
+	height: 200px;
+	perspective: 1000px;
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+	animation-play-state: paused;
+}
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 10px;
+	top: 10px;
+	background: #c7c7bb;
+	overflow: hidden;
+	border: solid 5px #1d3557;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+	//-webkit-filter: grayscale(1);
+	cursor: pointer;
+    width: 110%;
+	transition: all .5s ease;
+}
+#carousel img:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
 }
 /****Gallery****/
 .nav{

@@ -1,0 +1,13 @@
+@media (max-width:1575px){
+    .header{
+        h1{
+            text-align: center;
+            display: block;
+        }
+        nav{
+            margin-left: 0;
+            margin: 0 auto ($spacing-unit*2)+4;
+            display: block;
+        }
+    }   
+}
