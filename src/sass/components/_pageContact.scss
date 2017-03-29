@@ -4,22 +4,31 @@ form.contact{
     margin:$spacing-el auto 0;
     width: 400px;
     
-    label, #submit{
-        margin-top: $spacing-unit;
-        font-size: $font-lvl1;
+    label{
+        margin-top: $spacing-unit*3;
+        @include rhythm($font-content, 36);
     }
     input, textarea{
+        margin-top: $spacing-unit;
         min-width: 300px;
-        color: $bleu3;
+        color: #fff;
+        background-color:$bleu3;
+        border-top: 3px solid $litle-elements;
     }
     
     input:focus, textarea:focus{
         background-color: $bleu3;
-        color: $bleu1;
+        color: #fff;
+        border-top: none;
+        border-bottom: 3px solid $litle-elements;
     }
     legend{
-        font-size: $font-lvl2;
+        @include rhythm($font-lvl1, 72);
         text-transform: uppercase;
-        line-height: 1;
+    }
+    #submit{
+        background-color: #FFF;
+        color: $bleu3;
+    @include rhythm($font-content, 36);
     }
 }
