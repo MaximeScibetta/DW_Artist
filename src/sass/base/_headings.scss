@@ -2,12 +2,34 @@ h1{
     @include rhythm($font-lvl3, 144);
 }
 h2{
-    @include rhythm($font-lvl2, 108);
+    @include rhythm($font-lvl2, $font-lvl2*1.5);
 }
 h3{
-    @include rhythm($font-lvl1, 72);
+    @include rhythm($font-lvl1, $font-lvl1*2);
 }
 p{
-    @include rhythm($font-content, 36);
+    @include rhythm($font-content, $font-content*1.5);
     margin-top: 36px;
+}
+@media screen and (max-width:750px){
+    $font-base : 12;
+    $font-content: $font-base * 1.5;
+    $font-lvl1: $font-content * 1.5;
+    $font-lvl2: $font-lvl1 * 1.5;
+    $font-lvl3: $font-lvl2 * 1.5;
+    $spacing-unit: 8px;
+    $spacing-el: 36px;
+    h1{
+       // @include rhythm($font-lvl3, 144);
+    }
+    h2{
+        @include rhythm($font-lvl2, $font-lvl2*1.5);
+    }
+    h3{
+        @include rhythm($font-lvl1, $font-lvl1*2);
+    }
+    p{
+        @include rhythm($font-content, $font-content*1.5);
+        margin-top: 36px;
+    }
 }

@@ -32,3 +32,22 @@ footer a.pinterest:before {
 footer a.blog:before {
   content: "\e020";
 }
+@media (max-width:800px){
+  footer {
+    padding: 48px 0;
+    a{
+      margin: 0 $spacing-el/2;
+    }
+  }
+}
+@media (max-width:485px){
+  footer a{
+      margin: 0 $spacing-el/4;
+    }
+}
+@media (max-width:485px){
+  footer a{
+      margin: 0 7px;
+    }
+
+}

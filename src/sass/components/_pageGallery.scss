@@ -144,3 +144,145 @@
 }.m6{
     left: 625px;
 }
+@media screen and (max-width:770px){
+    .m{
+        padding: 0;
+        width: 100%;
+        height: 800px;
+    }
+    .m1{ 
+        left:125px;
+        top: 550px;
+    }.m2{
+        left: 250px;
+        top: 550px;
+    }.m3{
+        left: 375px;
+        top: 550px;
+    }.m4{
+        left: 125px;
+    }.m5{
+        left: 250px;
+    }.m6{
+        left: 375px;
+    }
+}
+@media screen and (max-width:575px){
+    .m{
+        padding: 0;
+        width: 100%;
+        height: 800px;
+    }
+    .m1{ 
+        left:50px;
+        top: 550px;
+    }.m2{
+        left: 175px;
+        top: 550px;
+    }.m3{
+        left: 300px;
+        top: 550px;
+    }.m4{
+        left: 50px;
+    }.m5{
+        left: 175px;
+    }.m6{
+        left: 300px;
+    }
+}
+@media screen and (max-width:540px){
+    .m{
+        height: 520px;
+    }
+    .cube-wrap, .cube, .cube div{
+        width: 300px;
+        height: 300px;
+    }
+    .cube-wrap{
+        perspective: 150px;
+    }
+    .m1{ 
+        left:50px;
+        top: 320px;
+    }.m2{
+        left: 175px;
+        top: 320px;
+    }.m3{
+        left: 300px;
+        top: 320px;
+    }.m4{
+        left: 50px;
+        top:440px;
+    }.m5{
+        left: 175px;
+        top:440px;
+    }.m6{
+        left: 300px;
+        top:440px;
+    }
+}
+
+@media screen and (max-width:428px){
+
+    .m1{ 
+        left:0;
+        top: 320px;
+    }.m2{
+        left: 125px;
+        top: 320px;
+    }.m3{
+        left: 250px;
+        top: 320px;
+    }.m4{
+        left: 0;
+        top:440px;
+    }.m5{
+        left: 125px;
+        top:440px;
+    }.m6{
+        left: 250px;
+        top:440px;
+    }
+}
+@media screen and (max-width:370px){
+    .m1{ 
+        left:0;
+        top: 320px;
+    }.m2{
+        left: 110px;
+        top: 320px;
+    }.m3{
+        left: 220px;
+        top: 320px;
+    }.m4{
+        left: 0;
+        top:440px;
+    }.m5{
+        left: 110px;
+        top:440px;
+    }.m6{
+        left: 220px;
+        top:440px;
+    }
+}
+@media screen and (max-width:340px){
+    .m1{ 
+        left:0;
+        top: 320px;
+    }.m2{
+        left: 105px;
+        top: 320px;
+    }.m3{
+        left: 210px;
+        top: 320px;
+    }.m4{
+        left: 0;
+        top:440px;
+    }.m5{
+        left: 105px;
+        top:440px;
+    }.m6{
+        left: 210px;
+        top:440px;
+    }
+}

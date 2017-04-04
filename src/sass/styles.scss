@@ -43,7 +43,19 @@
         margin: 0 20px;
     }
 }
-
+@media (max-width: 475px){
+    .wrapper__content{
+        margin: 0 5px;
+    }
+}
+@media (max-width: 400px){
+    .wrapper__content{
+        margin: 0 2px;
+    }
+    .biography{
+        border-left: 10px $bleu3 solid !important;
+    }
+}
 body{
     background-color: $base-bcg-color;
     color: $bleu3;
@@ -61,13 +73,13 @@ body{
         background-color: $bleu2;
         color: $bleu3;
         font-family: $oswaldRegular;
-    span{
-        display: block;
-        height: 400px;
-        background-image: url(../images/profil.jpg);
+        span{
+            display: block;
+            height: 400px;
+            background-image: url(../images/profil.jpg);
             background-position-y: -110px;
-        background-size: cover;
-        margin: 0 -15px 0 -15px;
+            background-size: cover;
+            margin: 0 -15px 0 -15px;
         }
     }
 }
@@ -79,7 +91,7 @@ body{
         margin: 0 auto;
     }
     dl{
-       margin: 100px 0 0;
+       margin:50px auto 0 auto !important;
        background-color: $bleu2;
         color: $bleu3;
         font-family: $oswaldRegular;
@@ -162,30 +174,72 @@ dt:first-child{
 
 }
 dt:not(:first-child){
-    margin-top: $spacing-unit*6;
+    margin-top: $spacing-unit*4+1;
 }
 dt{
-    @include rhythm($font-lvl1, 72);
+    @include rhythm($font-lvl1, $font-lvl1*2);
     //margin-top:20px;
 }
 dd:first-of-type{
     margin: 28px 0 0 $spacing-unit*2;
-    @include rhythm($font-content, 36);
+    @include rhythm($font-content, $font-content*1.5);
     //margin:$spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
 }
 dd:not(:first-of-type){
 }
 dd{
-    @include rhythm($font-content, 36);
+    @include rhythm($font-content, $font-content*1.5);
     margin:$spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
 }
 dd:nth-child(6){
- margin-top: ($spacing-unit*2)+4;
+ margin-top: ($spacing-unit*2)-1;
 }
 dd:last-child{
     margin-bottom: $spacing-el;
+}
+@media (max-width:500px){
+    $font-base : 12;
+    $font-content: $font-base * 1.5;
+    $font-lvl1: $font-content * 1.5;
+    $font-lvl2: $font-lvl1 * 1.5;
+    $font-lvl3: $font-lvl2 * 1.5;
+    $spacing-unit: 8px;
+    $spacing-el: 36px;
+    
+    dt:first-of-type{
+    margin-top: ($spacing-unit)+2;
+    }
+
+    dt:not(:first-of-type){
+        margin-top: ($spacing-unit*4)-4;
+    }
+    dt:not(:first-child){
+        margin-top: $spacing-unit*4+1;
+    }
+    dt{
+    @include rhythm($font-lvl1, $font-lvl1*2);
+    }
+    dd:first-of-type{
+    margin: 15px 0 0 $spacing-unit*2;
+    @include rhythm($font-content, $font-content*1.5);
+    }
+    dd{
+    @include rhythm($font-content, $font-content*1.5);
+    margin:$spacing-unit*3 0 0 $spacing-unit*2;
+    }
+    dd:nth-child(6){
+    margin-top: ($spacing-unit*2)-1;
+    }
+    dd:last-child{
+    margin-bottom: $spacing-el;
+    }
+}
+@media screen and (max-width:380px){
+    dl span{
+        background-position: center;
+    }
 }
 /*galery home*/
 
@@ -251,7 +305,7 @@ img{
     li{
         display: inline-block;
         margin-right: $spacing-unit;
-        @include rhythm($font-content, 36);
+        @include rhythm($font-content, $font-content*1.5);
         padding:$spacing-unit/2 $spacing-unit/2;
             &.active{
             background-color: $litle-elements;
@@ -289,7 +343,7 @@ img{
     }
     span{
     display: block;
-    @include rhythm($font-content, 36);
+    @include rhythm($font-content, $font-content*1.5);
     font-family: 'baskerville';
     }
 }

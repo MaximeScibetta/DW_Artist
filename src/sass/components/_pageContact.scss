@@ -15,10 +15,9 @@ label:not(::first-of-type){
     input, textarea{
         margin-top: $spacing-unit;
         min-width: 300px;
-        color: #fff;
+        color: $bleu3;
         background-color: $base-bcg-color;
         max-width: 400px;
-        color: #fff;
         letter-spacing: 1px;
         border-radius: 5px;
         border: 1px solid $bleu3;
@@ -118,14 +117,14 @@ ul.contact-info{
 }
 /*CONTACT SOCIAL*/
 div.contact-wrapper{
-        width: 1000px;
+    width: 770px;
     margin: 0 auto;
     position: relative;
 }
 .contact-social{
         position: absolute;
         bottom: 90px;
-        right: 200px;
+        right: 0;
         font-size: 2.3rem;
     li{
         position: relative; 
@@ -197,5 +196,76 @@ div.contact-wrapper{
                 transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
             }
          }
+    }
+}
+@media screen and (max-width:810px){
+    #contact{
+        width: 100%;
+    }
+    form.contact{
+        width: 100%;
+        input, label, textarea{
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+    .contact-info{
+        width: 100%;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    .contact-social{
+        position: initial;
+        width:360px;
+        margin: 30px auto 0; 
+        li{
+            left:0;
+        }
+    }
+}
+
+@media screen and (max-width:445px){
+    $font-base : 12;
+    $font-content: $font-base * 1.5;
+    $font-lvl1: $font-content * 1.5;
+    $font-lvl2: $font-lvl1 * 1.5;
+    $font-lvl3: $font-lvl2 * 1.5;
+    $spacing-unit: 8px;
+
+    ul.contact-info{ 
+    padding-bottom: $spacing-unit;
+        li{
+            @include rhythm($font-lvl1, 72);
+            margin-top: $spacing-unit;
+        }
+        .localisation::before{
+            @include rhythm($font-lvl1, 72);
+            margin-right: $spacing-unit*2;
+        }
+        .phone::before{
+            @include rhythm($font-lvl1, 72);
+            margin-right: $spacing-unit*2;
+        }
+        .email::before{
+            @include rhythm($font-lvl1, 72);
+            margin-right: $spacing-unit*2;
+        }
+    }
+}
+@media screen and (max-width:380px){
+    .contact-social{
+        width: 317px;
+        li{
+            margin: 5px 9px 0 auto;
+        }
+    }
+}
+@media screen and (max-width:342px){
+    ul.contact-info{
+        .localisation::before,
+        .email::before,
+        .phone::before{
+            margin-right:0;
+        }
     }
 }

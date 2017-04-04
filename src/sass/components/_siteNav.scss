@@ -77,3 +77,43 @@ nav {
     -moz-transform: translateX(0%);
     transform: translateX(0%);
 }
+@media screen and (max-width:900px){
+    $font-base : 12;
+    $font-content: $font-base * 1.5;
+    $font-lvl1: $font-content * 1.5;
+    $font-lvl2: $font-lvl1 * 1.5;
+    $font-lvl3: $font-lvl2 * 1.5;
+    $spacing-unit: 8px;
+    $spacing-el: 36px;
+    .nav-effect a::before {
+        padding: $spacing-unit $spacing-unit*2;}
+    .nav-effect a span {
+    padding: $spacing-unit $spacing-unit*2;}
+    .nav-effect a {
+    margin: $spacing-unit*2 $spacing-unit*2;
+    @include rhythm($font-content, 36);}
+    .nav-effect  {
+        margin-left: $spacing-el * 2;}
+}
+@media screen and (max-width:726px){
+    .nav-effect a {
+        margin: $spacing-unit $spacing-unit;}
+}
+@media screen and (max-width:686px){
+    .nav-effect a {
+        margin: $spacing-unit/2 $spacing-unit/2;}
+}
+@media screen and (max-width:626px){
+    .nav-effect a {
+       display: block;
+       margin:$spacing-unit auto;
+       width: 75%;}
+    h1{
+     @include rhythm($font-lvl3, 100);
+     }
+}
+@media screen and (max-width:500px){
+     h1{
+     @include rhythm($font-lvl3, 75);
+     }
+}

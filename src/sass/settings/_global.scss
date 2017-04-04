@@ -1,10 +1,13 @@
-//Fonts-size
-$font-base: 1em;
+
+    //Fonts-size
+
+$font-base: 16;
+
 $font-micro: 0.75em;
-$font-content: 24;
-$font-lvl1: 48;
-$font-lvl2: 72;
-$font-lvl3: 96;
+$font-content: $font-base * 1.5;
+$font-lvl1: $font-content * 1.5;
+$font-lvl2: $font-lvl1 * 1.5;
+$font-lvl3: $font-lvl2 * 1.5;
 
 //Fonts-family
 $oswaldELight: "Oswald-ExtraLight", "SourceSansPro-ExtraLight", sans-serif;
@@ -22,3 +25,8 @@ $spacing-el: 48px;
 
 //Padding
 $input-padding: 10px 6px 10px 6px;
+@media screen and (max-width:750px){
+    $font-base : 12;
+    $spacing-unit: 8px;
+    $spacing-el: 36px;
+}
