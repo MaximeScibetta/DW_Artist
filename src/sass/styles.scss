@@ -131,13 +131,38 @@ body{
         p:first-child{
             margin-top: 13px;
         }
+
+    p{
+        font-family: 'baskerville';
     }
-    
+    p:first-child{
+        margin-top: 8px;
+    }
+    }
 dt:first-of-type{
     margin-top: ($spacing-unit)+2;
 }
+
 dt:not(:first-of-type){
     margin-top: ($spacing-unit*4)-4;
+}
+dl{
+   // flex:2;
+    margin: 0 0 0 10%;
+    //max-width: 1000px;
+    //min-width: 900px;
+    padding:0 15px;
+    //background-image: url('../images/portrait6.JPG');
+    //background-position-x: -50px;
+    background-color: $bleu2;
+    color: $bleu3;
+    font-family: $oswaldRegular;
+}
+dt:first-child{
+
+}
+dt:not(:first-child){
+    margin-top: $spacing-unit*6;
 }
 dt{
     @include rhythm($font-lvl1, 72);
@@ -150,6 +175,8 @@ dd:first-of-type{
     max-width: 500px;
 }
 dd:not(:first-of-type){
+}
+dd{
     @include rhythm($font-content, 36);
     margin:$spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
@@ -234,7 +261,6 @@ img{
                 }
             }
     }
-    
 }
 /****Forms****/
 .contact{
@@ -274,10 +300,10 @@ hr{
     margin: $spacing-unit*3 auto;
     border: 1px solid $litle-elements;
 }
-
 .here{
     display: block;
 }
+
 .nothere{
     display: none;
 }

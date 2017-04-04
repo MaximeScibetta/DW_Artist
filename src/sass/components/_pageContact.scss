@@ -1,34 +1,201 @@
 form.contact{
-    background-color: $bleu3;
-    padding: $spacing-el;
-    margin:$spacing-el auto 0;
-    width: 400px;
+    //background-color: $bleu3;
+    //padding: $spacing-el;
+    //margin:$spacing-el auto 0;
+    //width: 400px;
+    display: inline-block;
     
-    label{
-        margin-top: $spacing-unit*3;
-        @include rhythm($font-content, 36);
-    }
+label{
+    @include rhythm($font-content, 36);
+    color: $bleu3;
+}
+label:not(::first-of-type){
+    margin-top: $spacing-unit*3;
+}
     input, textarea{
         margin-top: $spacing-unit;
         min-width: 300px;
         color: #fff;
-        background-color:$bleu3;
-        border-top: 3px solid $litle-elements;
-    }
-    
-    input:focus, textarea:focus{
-        background-color: $bleu3;
+        background-color: $base-bcg-color;
+        max-width: 400px;
         color: #fff;
-        border-top: none;
-        border-bottom: 3px solid $litle-elements;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        border: 1px solid $bleu3;
+        font-family: sans-serif;
     }
     legend{
         @include rhythm($font-lvl1, 72);
         text-transform: uppercase;
     }
     #submit{
-        background-color: #FFF;
         color: $bleu3;
+        width: 100%;
+        margin-top: $spacing-unit;
+        display: block;
     @include rhythm($font-content, 36);
+    }
+}
+
+/*Contact de gauche*/
+.send-button {
+  margin-top: 15px;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  border: none;
+  border-radius: 5px;
+  background-color: $bleu3;
+}
+.button {
+  width: 100%;
+  height: 100px;
+  transition: all .2s ease-in-out;
+      overflow: hidden;
+}
+.send-text {
+    font:300 24px $oswaldLight;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    color: $base-bcg-color;
+    height: 50px;
+    vertical-align: middle;
+}
+.send-icon::before{
+    width: 50px;
+    height: 50px;
+    display: block;
+    color: $base-bcg-color;
+    font-family: 'Icon';
+    content:'\e98d';
+    margin: 10px auto 0;
+    vertical-align: middle;
+}
+
+.button:hover {
+  transform: translate3d(0px, -50px, 0px);
+}
+/* Contac de droite*/
+ul.contact-info{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 50px;            
+    padding-bottom: $spacing-unit;
+    border-bottom: 1px solid $bleu3;
+        li{
+            @include rhythm($font-lvl1, 72);
+            margin-top: $spacing-unit;
+        }
+     .localisation::before{
+        display: inline-block;
+        font-family: 'Icon';
+        @include rhythm($font-lvl1, 72);
+        height: 50px;
+        width: 50px;
+        content:'\e947';
+        margin-right: $spacing-unit*2;
+    }
+    .phone::before{
+        display: inline-block;
+        font-family: 'Icon';
+        @include rhythm($font-lvl1, 72);
+        height: 50px;
+        width: 50px;
+        content:'\e942';
+        margin-right: $spacing-unit*2;
+    }
+    .email::before{
+        display: inline-block;
+        font-family: 'Icon';
+        @include rhythm($font-lvl1, 72);
+        height: 50px;
+        width: 50px;
+        content:'\e945';
+        margin-right: $spacing-unit*2;
+    }
+}
+/*CONTACT SOCIAL*/
+div.contact-wrapper{
+        width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.contact-social{
+        position: absolute;
+        bottom: 90px;
+        right: 200px;
+        font-size: 2.3rem;
+    li{
+        position: relative; 
+        top: 0;
+        left: -20px;
+        display: inline-block;
+        height: 70px;
+        width: 70px;
+        margin: 5px 20px 0 auto;
+        line-height: 62px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: $bleu3;
+        cursor: pointer; 
+        transition: all .2s ease-in-out;
+        a{
+        color: $base-bcg-color;
+            &.facebook::before{
+                font-family: 'Icon';
+                font-size: 30px;
+                height: 20px;
+                width: 20px;
+                content:'\ea90';
+                margin-left: 20px;
+            }
+             &.twitter::before{
+                font-family: 'Icon';
+                font-size: 30px;
+                height: 20px;
+                width: 20px;
+                content:'\ea96';
+                margin-left: 20px;
+            }
+             &.instagram::before{
+                font-family: 'Icon';
+                font-size: 30px;
+                height: 20px;
+                width: 20px;
+                content:'\ea92';
+                margin-left: 20px;
+            }
+             &.github::before{
+                font-family: 'Icon';
+                font-size: 30px;
+                height: 20px;
+                width: 20px;
+                content:'\eab0';
+                margin-left: 20px;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            opacity: 0;
+            box-shadow: 0 0 0 2px $hover-color;
+            transition: all .2s ease-in-out;
+        }
+        &:hover{
+            background-color:$hover-color; 
+            &::after{
+                opacity: 1;  
+                transform: scale(1.15);
+                transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+            }
+         }
     }
 }
