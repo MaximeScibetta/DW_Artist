@@ -115,6 +115,22 @@ ul.contact-info{
         margin-right: $spacing-unit*2;
     }
 }
+@media screen and (max-width:337px){
+    ul.contact-info{
+        .email::before,
+        .phone::before,
+        .localisation::before{
+            width: 30px;
+        }
+    }
+    .contact .contact-social{
+        width: 100px;
+        li {
+            display: block;
+            margin: 0 auto $spacing-unit auto;
+        }
+    }
+}
 /*CONTACT SOCIAL*/
 div.contact-wrapper{
     width: 770px;

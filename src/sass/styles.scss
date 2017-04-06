@@ -61,6 +61,9 @@ body{
     color: $bleu3;
     font-family: $oswaldLight;
 }
+dl:last-of-type{
+    padding-bottom: $spacing-unit*4;
+}
 @media (min-width:1439px){
     .home article{
         display:flex;
@@ -105,9 +108,6 @@ body{
             background-size: cover;
             margin: 0 -15px 0 -15px;
         }
-        dd:last-child{
-                padding-bottom: 48px;
-            }
     }
     .container-media{
         display: block;
@@ -170,9 +170,6 @@ dl{
     color: $bleu3;
     font-family: $oswaldRegular;
 }
-dt:first-child{
-
-}
 dt:not(:first-child){
     margin-top: $spacing-unit*4+1;
 }
@@ -186,8 +183,6 @@ dd:first-of-type{
     //margin:$spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
 }
-dd:not(:first-of-type){
-}
 dd{
     @include rhythm($font-content, $font-content*1.5);
     margin:$spacing-unit*3 0 0 $spacing-unit*2;
@@ -195,9 +190,6 @@ dd{
 }
 dd:nth-child(6){
  margin-top: ($spacing-unit*2)-1;
-}
-dd:last-child{
-    margin-bottom: $spacing-el;
 }
 @media (max-width:500px){
     $font-base : 12;
@@ -232,9 +224,6 @@ dd:last-child{
     dd:nth-child(6){
     margin-top: ($spacing-unit*2)-1;
     }
-    dd:last-child{
-    margin-bottom: $spacing-el;
-    }
 }
 @media screen and (max-width:380px){
     dl span{
@@ -243,7 +232,7 @@ dd:last-child{
 }
 /*galery home*/
 
-.container-screen, .container-media{
+.container-screen{
 	margin: 100px auto 50px auto;
 	width: 200px;
 	height: 200px;
@@ -327,7 +316,7 @@ img{
 .event{
     margin: 0 auto;
     //position: relative;
-    width: 50%;
+    width: 600px;
     text-align: center;
     h2{
         text-transform: uppercase;
@@ -336,15 +325,50 @@ img{
     a{
         text-transform: uppercase;
         font-family: $oswaldRegular;
+        background-color: $red;
+        padding: 8px;
+        color: #FFF;
+        border-radius: 15px;
+        letter-spacing: 1px;
+
+        display:inherit;
+        width: 40%;
+        margin: 0 auto;
+        vertical-align: middle;
+        transform: translateZ(0);
+        -moz-osx-font-smoothing: grayscale;
+        transition-duration: 0.3s;
+        transition-property: transform;
         &:hover, &:active, &:focus{
-            text-decoration: underline;
-            //color: $bleu3;
+            //text-decoration: underline;
+            background-color: $bleu3;
+            transform: scale(1.3);
         }
     }
     span{
     display: block;
     @include rhythm($font-content, $font-content*1.5);
     font-family: 'baskerville';
+    &:nth-child(4){
+        margin-bottom: $spacing-unit*2;
+    }
+    }
+}
+@media screen and (max-width:640px){
+    .event{
+        width: 100%;
+    }
+}
+@media screen and (max-width:640px){
+    article hr{
+        width: 90%;
+    }
+}
+@media screen and (max-width:370px){
+    .event{
+        a{
+            width: 140px;
+        }
     }
 }
 
@@ -354,6 +378,30 @@ hr{
     margin: $spacing-unit*3 auto;
     border: 1px solid $litle-elements;
 }
+
+@media screen and (max-width:445px){
+    $font-base : 12;
+    $font-content: $font-base * 1.5;
+    $font-lvl1: $font-content * 1.5;
+    $font-lvl2: $font-lvl1 * 1.5;
+    $font-lvl3: $font-lvl2 * 1.5;
+    $spacing-unit: 8px;
+
+    .event{
+        h2{
+            @include rhythm($font-lvl2, $font-lvl2*1.5);
+            margin-bottom: $spacing-unit*3;
+        }
+        span{
+            display: block;
+            @include rhythm($font-content, $font-content*1.5);
+            font-family: 'baskerville';
+            &:nth-child(4){
+                margin-bottom: $spacing-unit*2;
+            }
+        }
+    }
+}
 .here{
     display: block;
 }
@@ -361,3 +409,87 @@ hr{
 .nothere{
     display: none;
 }
+
+/*GALLERIE SMARTPHON*/
+
+.container-media{
+	max-width: 800px;
+	margin: 5% auto;
+	padding: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px $bleu3;
+}
+
+.text-center{
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.gallerie {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallerie div > img {
+  max-width: 100%;
+  display: block;
+}
+
+.gallerie div {
+  margin: 10px;
+  flex-basis: 180px;
+}
+
+@media only screen and (max-width: 480px) {
+  .gallerie {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lightbox > div {
+    margin-bottom: 10px;
+  }
+}
+
+
+/*Lighbox CSS*/
+
+
+.lightbox{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+.lightbox img{
+    display: block;
+    vertical-align: middle;
+    margin: auto;
+    width: 50%;
+}
+@media screen and (max-width:600px){
+    .lightbox img{
+        width: 90%;
+    }
+}
+.lightbox .caption{
+	margin: 15px auto;
+	width: 50%;
+	text-align: center;
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 700;
+	color: #eee;
+}
+        
