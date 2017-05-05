@@ -12,18 +12,18 @@ let $gallery;
 //     console.log($( $gallery );
 //     $( `#${ ( gallery ).data( "gal-target" ) }` ).addClass( "here" );
 // };
-const fChangeGal = function ( oEvent ) {
+const fChangeGal = function(oEvent) {
     oEvent.preventDefault();
 
-    $gallery.parent().filter( ".active" ).removeClass( "active" );
-    $( this ).parent().addClass( "active" );
-    $( ".container .gallery.here" ).removeClass( "here" ).addClass( "nothere" );
-    $( `#${ $( this ).data( "gal-target" ) }` ).addClass( "here" ).removeClass( "nothere" );
+    $gallery.parent().filter(".active").removeClass("active");
+    $(this).parent().addClass("active");
+    $(".container-media .gallerie.here").removeClass("here").addClass("nothere");
+    $(`#${ $( this ).data( "gal-target" ) }`).addClass("here").removeClass("nothere");
 };
 
-$( function() {
+$(function() {
 
     // 2. Tab
-    ( $gallery = $( "ul.nav a" ) ).on( "click", fChangeGal );
+    ($gallery = $("ul.nav a")).on("click", fChangeGal);
 
-} );
+});

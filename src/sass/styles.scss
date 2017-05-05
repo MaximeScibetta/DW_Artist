@@ -1,82 +1,112 @@
 /************/
+
+
 /***IMPORT***/
+
+
 /************/
 
+
 /****generic****/
+
 @import 'generic/reset';
+
 /****tools***/
+
 @import 'tools/baseline';
+
 /****settings***/
+
 @import 'settings/colors';
 @import 'settings/fontFace';
 @import 'settings/global';
 
 /****generic****/
+
 @import 'generic/normalize';
+
 /****base****/
+
 @import 'base/headings';
 @import 'base/links';
 @import 'base/forms';
+
 /****components****/
+
 @import 'components/pageFooter';
 @import 'components/pageHeader';
 @import 'components/pageContact';
 @import 'components/pageGallery';
 @import 'components/siteNav';
+
 /****trumps****/
+
 @import 'trumps/hideText';
 @import 'settings/responsive';
-/***********/
-/****CSS****/
+
 /***********/
 
+
+/****CSS****/
+
+
+/***********/
+
+
 /****body****/
-.wrapper{
+
+.wrapper {
     margin: 0 auto;
     max-width: 2000px;
-    &__content{
-    margin: 0 $spacing-el;
+    &__content {
+        margin: 0 $spacing-el;
     }
 }
-@media (max-width: 955px){
-    .wrapper__content{
+
+@media (max-width: 955px) {
+    .wrapper__content {
         margin: 0 20px;
     }
 }
-@media (max-width: 475px){
-    .wrapper__content{
+
+@media (max-width: 475px) {
+    .wrapper__content {
         margin: 0 5px;
     }
 }
-@media (max-width: 400px){
-    .wrapper__content{
+
+@media (max-width: 400px) {
+    .wrapper__content {
         margin: 0 2px;
     }
-    .biography{
+    .biography {
         border-left: 10px $bleu3 solid !important;
     }
 }
-body{
+
+body {
     background-color: $base-bcg-color;
     color: $bleu3;
     font-family: $oswaldLight;
 }
-dl:last-of-type{
+
+dl:last-of-type {
     padding-bottom: $spacing-unit*4;
 }
-@media (min-width:1439px){
-    .home article{
-        display:flex;
+
+@media (min-width:1439px) {
+    .home article {
+        display: flex;
         flex-flow: row nowrap;
         align-items: flex-start;
     }
-    dl{
+    dl {
         margin: 0 0 0 10%;
-        padding:0 15px;
+        padding: 0 15px;
         background-color: $bleu2;
         color: $bleu3;
         font-family: $oswaldRegular;
-        span{
+        span {
             display: block;
             height: 400px;
             background-image: url(../images/profil.jpg);
@@ -86,21 +116,22 @@ dl:last-of-type{
         }
     }
 }
-@media (max-width:1440px){
-    .home article{
+
+@media (max-width:1440px) {
+    .home article {
         position: relative;
     }
-    .biography{
+    .biography {
         margin: 0 auto;
     }
-    dl{
-       margin:50px auto 0 auto !important;
-       background-color: $bleu2;
+    dl {
+        margin: 50px auto 0 auto !important;
+        background-color: $bleu2;
         color: $bleu3;
         font-family: $oswaldRegular;
         max-width: 1000px;
         padding: 0 15px;
-        span{
+        span {
             display: block;
             height: 589px;
             background-image: url(../images/profil.jpg);
@@ -109,220 +140,229 @@ dl:last-of-type{
             margin: 0 -15px 0 -15px;
         }
     }
-    .container-media{
+    .container-media {
         display: block;
     }
-    .container-screen{
-        display: none;
+}
+
+@media (max-width:1576px) {
+    dl {
+        margin: 0 0 0 5%;
     }
 }
-@media (min-width:1440px){
-    .container-media{
-        display: none;
-    }
-}
-@media (max-width:1576px){
-    dl{
-        margin:0 0 0 5%;  
-    }
-}
-@media (max-width:1440px){
-    dl{
+
+@media (max-width:1440px) {
+    dl {
         margin: 100px auto 0;
     }
 }
-    .biography{
-    max-width: 1000px;
-    border-left:5px $bleu3 solid;
-    padding-left:20px;
-    flex:1.2;
-    align-self: flex-start;
-        p{
-            font-family: 'baskerville';
-        }
-        p:first-child{
-            margin-top: 13px;
-        }
 
-    p{
+.biography {
+    max-width: 1000px;
+    border-left: 5px $bleu3 solid;
+    padding-left: 20px;
+    flex: 1.2;
+    align-self: flex-start;
+    img {
+        float: left;
+        margin-right: $spacing-unit*2;
+    }
+    p {
         font-family: 'baskerville';
     }
-    p:first-child{
-        margin-top: 8px;
+    p#first {
+        margin-top: 0;
     }
-    }
-dt:first-of-type{
+}
+
+article section+section {
+    flex-basis: 40%;
+}
+
+dt:first-of-type {
     margin-top: ($spacing-unit)+2;
 }
 
-dt:not(:first-of-type){
+dt:not(:first-of-type) {
     margin-top: ($spacing-unit*4)-4;
 }
-dl{
-   // flex:2;
+
+dl {
+    // flex:2;
     margin: 0 0 0 10%;
     //max-width: 1000px;
     //min-width: 900px;
-    padding:0 15px;
+    padding: 0 15px;
     //background-image: url('../images/portrait6.JPG');
     //background-position-x: -50px;
-    background-color: $bleu2;
-    color: $bleu3;
+    background-color: $bleu3;
+    color: $base-bcg-color;
     font-family: $oswaldRegular;
 }
-dt:not(:first-child){
+
+dt:not(:first-child) {
     margin-top: $spacing-unit*4+1;
 }
-dt{
+
+dt {
     @include rhythm($font-lvl1, $font-lvl1*2);
     //margin-top:20px;
 }
-dd:first-of-type{
+
+dd:first-of-type {
     margin: 28px 0 0 $spacing-unit*2;
     @include rhythm($font-content, $font-content*1.5);
     //margin:$spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
 }
-dd{
+
+dd {
     @include rhythm($font-content, $font-content*1.5);
-    margin:$spacing-unit*3 0 0 $spacing-unit*2;
+    margin: $spacing-unit*3 0 0 $spacing-unit*2;
     max-width: 500px;
 }
-dd:nth-child(6){
- margin-top: ($spacing-unit*2)-1;
+
+dd:nth-child(6) {
+    margin-top: ($spacing-unit*2)-1;
 }
-@media (max-width:500px){
-    $font-base : 12;
+
+@media (max-width:500px) {
+    $font-base: 12;
     $font-content: $font-base * 1.5;
     $font-lvl1: $font-content * 1.5;
     $font-lvl2: $font-lvl1 * 1.5;
     $font-lvl3: $font-lvl2 * 1.5;
     $spacing-unit: 8px;
     $spacing-el: 36px;
-    
-    dt:first-of-type{
-    margin-top: ($spacing-unit)+2;
+    dt:first-of-type {
+        margin-top: ($spacing-unit)+2;
     }
-
-    dt:not(:first-of-type){
+    dt:not(:first-of-type) {
         margin-top: ($spacing-unit*4)-4;
     }
-    dt:not(:first-child){
+    dt:not(:first-child) {
         margin-top: $spacing-unit*4+1;
     }
-    dt{
-    @include rhythm($font-lvl1, $font-lvl1*2);
+    dt {
+        @include rhythm($font-lvl1, $font-lvl1*2);
     }
-    dd:first-of-type{
-    margin: 15px 0 0 $spacing-unit*2;
-    @include rhythm($font-content, $font-content*1.5);
+    dd:first-of-type {
+        margin: 15px 0 0 $spacing-unit*2;
+        @include rhythm($font-content, $font-content*1.5);
     }
-    dd{
-    @include rhythm($font-content, $font-content*1.5);
-    margin:$spacing-unit*3 0 0 $spacing-unit*2;
+    dd {
+        @include rhythm($font-content, $font-content*1.5);
+        margin: $spacing-unit*3 0 0 $spacing-unit*2;
     }
-    dd:nth-child(6){
-    margin-top: ($spacing-unit*2)-1;
+    dd:nth-child(6) {
+        margin-top: ($spacing-unit*2)-1;
     }
 }
-@media screen and (max-width:380px){
-    dl span{
+
+@media screen and (max-width:380px) {
+    dl span {
         background-position: center;
     }
 }
+
+
 /*galery home*/
 
-.container-screen{
-	margin: 100px auto 50px auto;
-	width: 200px;
-	height: 200px;
-	perspective: 1000px;
-}
-.carousel{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	transform-style: preserve-3d;
-	animation: rotation 20s infinite linear;
-}
-.carousel:hover{
-	animation-play-state: paused;
-}
-.carousel figure{
-	display: block;
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	left: 10px;
-	top: 10px;
-	background: #c7c7bb;
-	overflow: hidden;
-	border: solid 5px #1d3557;
-}
-.carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
-.carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
-.carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
-.carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
-.carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
-.carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
-.carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
-.carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
-.carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
-
-img{
-	//-webkit-filter: grayscale(1);
-	cursor: pointer;
-    width: 110%;
-	transition: all .5s ease;
-}
-.carousel img:hover{
-	-webkit-filter: grayscale(0);
-  transform: scale(1.2,1.2);
-}
-
-@keyframes rotation{
-	from{
-		transform: rotateY(0deg);
-	}
-	to{
-		transform: rotateY(360deg);
-	}
-}
-/****Gallery****/
-.nav{
+// .container-screen{
+// 	margin: 100px auto 50px auto;
+// 	width: 200px;
+// 	height: 200px;
+// 	perspective: 1000px;
+// }
+// .carousel{
+// 	width: 100%;
+// 	height: 100%;
+// 	position: absolute;
+// 	transform-style: preserve-3d;
+// 	animation: rotation 20s infinite linear;
+// }
+// .carousel:hover{
+// 	animation-play-state: paused;
+// }
+// .carousel figure{
+// 	display: block;
+// 	position: absolute;
+// 	width: 200px;
+// 	height: 200px;
+// 	left: 10px;
+// 	top: 10px;
+// 	background: #c7c7bb;
+// 	overflow: hidden;
+// 	border: solid 5px #1d3557;
+// }
+// .carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+// .carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+// .carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+// .carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+// .carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+// .carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+// .carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+// .carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+// .carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+// img{
+// 	//-webkit-filter: grayscale(1);
+// 	cursor: pointer;
+//     width: 110%;
+// 	transition: all .5s ease;
+// }
+// .carousel img:hover{
+// 	-webkit-filter: grayscale(0);
+//   transform: scale(1.2,1.2);
+// }
+// @keyframes rotation{
+// 	from{
+// 		transform: rotateY(0deg);
+// 	}
+// 	to{
+// 		transform: rotateY(360deg);
+// 	}
+// }
+// /****Gallery****/
+.nav {
     text-align: center;
-    li{
+    li {
         display: inline-block;
         margin-right: $spacing-unit;
         @include rhythm($font-content, $font-content*1.5);
-        padding:$spacing-unit/2 $spacing-unit/2;
-            &.active{
+        padding: $spacing-unit/2 $spacing-unit/2;
+        &.active {
             background-color: $litle-elements;
             border-radius: 5px;
-                a{
-                  color: #fff;  
-                }
+            a {
+                color: #fff;
             }
+        }
     }
 }
+
+
 /****Forms****/
-.contact{
-    & legend, label{
-        color: #fff;   
+
+.contact {
+    & legend,
+    label {
+        color: #fff;
     }
 }
+
+
 /****Events****/
 
-.event{
+.event {
     margin: 0 auto;
     //position: relative;
     width: 600px;
     text-align: center;
-    h2{
+    h2 {
         text-transform: uppercase;
         margin-bottom: $spacing-unit*3;
     }
-    a{
+    a {
         text-transform: uppercase;
         font-family: $oswaldRegular;
         background-color: $red;
@@ -330,8 +370,7 @@ img{
         color: #FFF;
         border-radius: 15px;
         letter-spacing: 1px;
-
-        display:inherit;
+        display: inherit;
         width: 40%;
         margin: 0 auto;
         vertical-align: middle;
@@ -339,157 +378,175 @@ img{
         -moz-osx-font-smoothing: grayscale;
         transition-duration: 0.3s;
         transition-property: transform;
-        &:hover, &:active, &:focus{
+        &:hover,
+        &:active,
+        &:focus {
             //text-decoration: underline;
             background-color: $bleu3;
             transform: scale(1.3);
         }
     }
-    span{
-    display: block;
-    @include rhythm($font-content, $font-content*1.5);
-    font-family: 'baskerville';
-    &:nth-child(4){
-        margin-bottom: $spacing-unit*2;
-    }
+    span {
+        display: block;
+        @include rhythm($font-content, $font-content*1.5);
+        font-family: 'baskerville';
+        &:nth-child(4) {
+            margin-bottom: $spacing-unit*2;
+        }
     }
 }
-@media screen and (max-width:640px){
-    .event{
+
+@media screen and (max-width:640px) {
+    .event {
         width: 100%;
     }
 }
-@media screen and (max-width:640px){
-    article hr{
+
+@media screen and (max-width:640px) {
+    article hr {
         width: 90%;
     }
 }
-@media screen and (max-width:370px){
-    .event{
-        a{
+
+@media screen and (max-width:370px) {
+    .event {
+        a {
             width: 140px;
         }
     }
 }
 
-hr{
+hr {
     //display: block;
     width: 500px;
     margin: $spacing-unit*3 auto;
     border: 1px solid $litle-elements;
 }
 
-@media screen and (max-width:445px){
-    $font-base : 12;
+@media screen and (max-width:445px) {
+    $font-base: 12;
     $font-content: $font-base * 1.5;
     $font-lvl1: $font-content * 1.5;
     $font-lvl2: $font-lvl1 * 1.5;
     $font-lvl3: $font-lvl2 * 1.5;
     $spacing-unit: 8px;
-
-    .event{
-        h2{
+    .event {
+        h2 {
             @include rhythm($font-lvl2, $font-lvl2*1.5);
             margin-bottom: $spacing-unit*3;
         }
-        span{
+        span {
             display: block;
             @include rhythm($font-content, $font-content*1.5);
             font-family: 'baskerville';
-            &:nth-child(4){
+            &:nth-child(4) {
                 margin-bottom: $spacing-unit*2;
             }
         }
     }
 }
-.here{
-    display: block;
-}
 
-.nothere{
-    display: none;
-}
 
 /*GALLERIE SMARTPHON*/
 
-.container-media{
-	max-width: 800px;
-	margin: 5% auto;
-	padding: 20px;
-	border-radius: 10px;
-	overflow: hidden;
-	box-sizing: border-box;
-	box-shadow: 0 0 5px $bleu3;
+.container-media {
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px $bleu3;
 }
 
-.text-center{
-	text-align: center;
-	margin-bottom: 1em;
+.text-center {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 .gallerie {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.gallerie div > img {
-  max-width: 100%;
-  display: block;
+.gallerie div>img {
+    max-width: 100%;
+    display: block;
 }
 
 .gallerie div {
-  margin: 10px;
-  flex-basis: 180px;
+    margin: 10px;
+    flex-basis: 180px;
 }
 
 @media only screen and (max-width: 480px) {
-  .gallerie {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lightbox > div {
-    margin-bottom: 10px;
-  }
+    .gallerie {
+        flex-direction: column;
+        align-items: center;
+    }
+    .lightbox>div {
+        margin-bottom: 10px;
+    }
 }
 
 
 /*Lighbox CSS*/
 
-
-.lightbox{
-	display: none;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,.7);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 20;
-	padding-top: 30px;
-	box-sizing: border-box;
+.lightbox {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding-top: 30px;
+    box-sizing: border-box;
 }
 
-.lightbox img{
+.lightbox img {
     display: block;
     vertical-align: middle;
     margin: auto;
     width: 50%;
 }
-@media screen and (max-width:600px){
-    .lightbox img{
+
+@media screen and (max-width:600px) {
+    .lightbox img {
         width: 90%;
     }
 }
-.lightbox .caption{
-	margin: 15px auto;
-	width: 50%;
-	text-align: center;
-	font-size: 1em;
-	line-height: 1.5;
-	font-weight: 700;
-	color: #eee;
+
+.lightbox .caption {
+    margin: 15px auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #eee;
 }
-        
+
+.here {
+    display: flex;
+}
+
+.nothere {
+    display: none;
+}
+
+body.galerie {
+    .container-media {
+        max-width: 80%;
+        margin: $spacing-el auto 0;
+        .gallerie {
+            margin-top: $spacing-el;
+            div {
+                flex-basis: 30%;
+            }
+        }
+    }
+}
