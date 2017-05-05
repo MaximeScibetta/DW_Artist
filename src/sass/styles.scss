@@ -198,6 +198,14 @@ dl {
     background-color: $bleu3;
     color: $base-bcg-color;
     font-family: $oswaldRegular;
+    #trombino {
+        figure {
+            margin: 0 -15px 0 -15px;
+            img {
+                width: 100%;
+            }
+        }
+    }
 }
 
 dt:not(:first-child) {
@@ -550,3 +558,15 @@ body.galerie {
         }
     }
 }
+
+// article figure {
+//     position: relative;
+//     text-align: center;
+// }
+// article figure img {
+//     margin-bottom: 3px;
+// }
+// article figure figcaption {
+//     margin: 0 auto;
+//     display: inline-block;
+// }
