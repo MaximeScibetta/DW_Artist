@@ -1,18 +1,18 @@
-form.contact{
+form.contact {
     //background-color: $bleu3;
     //padding: $spacing-el;
     //margin:$spacing-el auto 0;
     //width: 400px;
     display: inline-block;
-    
-label{
-    @include rhythm($font-content, 36);
-    color: $bleu3;
-}
-label:not(::first-of-type){
-    margin-top: $spacing-unit*3;
-}
-    input, textarea{
+    label {
+        @include rhythm($font-content, 36);
+        color: $bleu3;
+    }
+    label:not(::first-of-type) {
+        margin-top: $spacing-unit*3;
+    }
+    input,
+    textarea {
         margin-top: $spacing-unit;
         min-width: 300px;
         color: $bleu3;
@@ -23,38 +23,42 @@ label:not(::first-of-type){
         border: 1px solid $bleu3;
         font-family: sans-serif;
     }
-    legend{
+    legend {
         @include rhythm($font-lvl1, 72);
         text-transform: uppercase;
     }
-    #submit{
+    #submit {
         color: $bleu3;
         width: 100%;
         margin-top: $spacing-unit;
         display: block;
-    @include rhythm($font-content, 36);
+        @include rhythm($font-content, 36);
     }
 }
 
+
 /*Contact de gauche*/
+
 .send-button {
-  margin-top: 15px;
-  height: 50px;
-  width: 100%;
-  overflow: hidden;
-  transition: all .2s ease-in-out;
-  border: none;
-  border-radius: 5px;
-  background-color: $bleu3;
+    margin-top: 15px;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    border: none;
+    border-radius: 5px;
+    background-color: $bleu3;
 }
+
 .button {
-  width: 100%;
-  height: 100px;
-  transition: all .2s ease-in-out;
-      overflow: hidden;
+    width: 100%;
+    height: 100px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
 }
+
 .send-text {
-    font:300 24px $oswaldLight;
+    font: 300 24px $oswaldLight;
     text-transform: uppercase;
     letter-spacing: 2px;
     overflow: hidden;
@@ -62,68 +66,73 @@ label:not(::first-of-type){
     height: 50px;
     vertical-align: middle;
 }
-.send-icon::before{
+
+.send-icon::before {
     width: 50px;
     height: 50px;
     display: block;
     color: $base-bcg-color;
     font-family: 'Icon';
-    content:'\e98d';
-    margin: 10px auto 0;
+    content: '\ea10';
+    margin: 17px auto 0;
     vertical-align: middle;
 }
 
 .button:hover {
-  transform: translate3d(0px, -50px, 0px);
+    transform: translate3d(0px, -50px, 0px);
 }
+
+
 /* Contac de droite*/
-ul.contact-info{
+
+ul.contact-info {
     display: inline-block;
     vertical-align: top;
-    margin: 0 0 0 50px;            
+    margin: 0 0 0 50px;
     padding-bottom: $spacing-unit;
     border-bottom: 1px solid $bleu3;
-        li{
-            @include rhythm($font-lvl1, 72);
-            margin-top: $spacing-unit;
-        }
-     .localisation::before{
+    li {
+        @include rhythm($font-lvl1, 72);
+        margin-top: $spacing-unit;
+    }
+    .localisation::before {
         display: inline-block;
         font-family: 'Icon';
         @include rhythm($font-lvl1, 72);
         height: 50px;
         width: 50px;
-        content:'\e947';
+        content: '\e947';
         margin-right: $spacing-unit*2;
     }
-    .phone::before{
+    .phone::before {
         display: inline-block;
         font-family: 'Icon';
         @include rhythm($font-lvl1, 72);
         height: 50px;
         width: 50px;
-        content:'\e942';
+        content: '\e942';
         margin-right: $spacing-unit*2;
     }
-    .email::before{
+    .email::before {
         display: inline-block;
         font-family: 'Icon';
         @include rhythm($font-lvl1, 72);
         height: 50px;
         width: 50px;
-        content:'\e945';
+        content: '\e945';
         margin-right: $spacing-unit*2;
     }
 }
-@media screen and (max-width:337px){
-    ul.contact-info{
+
+@media screen and (max-width:337px) {
+    ul.contact-info {
         .email::before,
         .phone::before,
-        .localisation::before{
+        .localisation::before {
             width: 30px;
         }
     }
-    .contact .contact-social{
+    .contact .contact-social {
         width: 100px;
         li {
             display: block;
@@ -131,19 +140,23 @@ ul.contact-info{
         }
     }
 }
+
+
 /*CONTACT SOCIAL*/
-div.contact-wrapper{
+
+div.contact-wrapper {
     width: 770px;
     margin: 0 auto;
     position: relative;
 }
-.contact-social{
-        position: absolute;
-        bottom: 90px;
-        right: 0;
-        font-size: 2.3rem;
-    li{
-        position: relative; 
+
+.contact-social {
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    font-size: 2.3rem;
+    li {
+        position: relative;
         top: 0;
         left: -20px;
         display: inline-block;
@@ -154,44 +167,44 @@ div.contact-wrapper{
         border-radius: 50%;
         color: #fff;
         background-color: $bleu3;
-        cursor: pointer; 
+        cursor: pointer;
         transition: all .2s ease-in-out;
-        a{
-        color: $base-bcg-color;
-            &.facebook::before{
+        a {
+            color: $base-bcg-color;
+            &.facebook::before {
                 font-family: 'Icon';
                 font-size: 30px;
                 height: 20px;
                 width: 20px;
-                content:'\ea90';
+                content: '\ea90';
                 margin-left: 20px;
             }
-             &.twitter::before{
+            &.twitter::before {
                 font-family: 'Icon';
                 font-size: 30px;
                 height: 20px;
                 width: 20px;
-                content:'\ea96';
+                content: '\ea96';
                 margin-left: 20px;
             }
-             &.instagram::before{
+            &.instagram::before {
                 font-family: 'Icon';
                 font-size: 30px;
                 height: 20px;
                 width: 20px;
-                content:'\ea92';
+                content: '\ea92';
                 margin-left: 20px;
             }
-             &.github::before{
+            &.github::before {
                 font-family: 'Icon';
                 font-size: 30px;
                 height: 20px;
                 width: 20px;
-                content:'\eab0';
+                content: '\eab0';
                 margin-left: 20px;
             }
         }
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             top: 0;
@@ -204,84 +217,88 @@ div.contact-wrapper{
             box-shadow: 0 0 0 2px $hover-color;
             transition: all .2s ease-in-out;
         }
-        &:hover{
-            background-color:$hover-color; 
-            &::after{
-                opacity: 1;  
+        &:hover {
+            background-color: $hover-color;
+            &::after {
+                opacity: 1;
                 transform: scale(1.15);
-                transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+                transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
             }
-         }
-    }
-}
-@media screen and (max-width:810px){
-    #contact{
-        width: 100%;
-    }
-    form.contact{
-        width: 100%;
-        input, label, textarea{
-            width: 100%;
-            min-width: 100%;
-        }
-    }
-    .contact-info{
-        width: 100%;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-    .contact-social{
-        position: initial;
-        width:360px;
-        margin: 30px auto 0; 
-        li{
-            left:0;
         }
     }
 }
 
-@media screen and (max-width:445px){
-    $font-base : 12;
+@media screen and (max-width:810px) {
+    #contact {
+        width: 100%;
+    }
+    form.contact {
+        width: 100%;
+        input,
+        label,
+        textarea {
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+    .contact-info {
+        width: 100%;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    .contact-social {
+        position: initial;
+        width: 360px;
+        margin: 30px auto 0;
+        li {
+            left: 0;
+        }
+    }
+}
+
+@media screen and (max-width:445px) {
+    $font-base: 12;
     $font-content: $font-base * 1.5;
     $font-lvl1: $font-content * 1.5;
     $font-lvl2: $font-lvl1 * 1.5;
     $font-lvl3: $font-lvl2 * 1.5;
     $spacing-unit: 8px;
-
-    ul.contact-info{ 
-    padding-bottom: $spacing-unit;
-        li{
+    ul.contact-info {
+        padding-bottom: $spacing-unit;
+        li {
             @include rhythm($font-lvl1, 72);
             margin-top: $spacing-unit;
         }
-        .localisation::before{
+        .localisation::before {
             @include rhythm($font-lvl1, 72);
             margin-right: $spacing-unit*2;
         }
-        .phone::before{
+        .phone::before {
             @include rhythm($font-lvl1, 72);
             margin-right: $spacing-unit*2;
         }
-        .email::before{
+        .email::before {
             @include rhythm($font-lvl1, 72);
             margin-right: $spacing-unit*2;
         }
     }
 }
-@media screen and (max-width:380px){
-    .contact-social{
+
+@media screen and (max-width:380px) {
+    .contact-social {
         width: 317px;
-        li{
+        li {
             margin: 5px 9px 0 auto;
         }
     }
 }
-@media screen and (max-width:342px){
-    ul.contact-info{
+
+@media screen and (max-width:342px) {
+    ul.contact-info {
         .localisation::before,
         .email::before,
-        .phone::before{
-            margin-right:0;
+        .phone::before {
+            margin-right: 0;
         }
     }
 }
