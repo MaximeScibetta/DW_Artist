@@ -20,14 +20,13 @@
 
 .tooltip {
     position: relative;
-    background: $red;
-    padding: 5px 12px;
-    margin: 5px;
-    font-size: 15px;
-    border-radius: 100%;
-    color: #FFF;
-    margin-right: 50px;
+    background: #60404f;
+    padding: 5px 17px;
+    font-size: 26px;
+    border-radius: 71%;
+    margin-right: 10px;
     font-family: $oswaldRegular;
+    color: #FFF;
 }
 
 .tooltip:before,
@@ -118,11 +117,9 @@
 .gallerie div>img {
     max-width: 100%;
     display: block;
-}
-
-.gallerie div {
-    margin: 10px;
-    flex-basis: 180px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -155,7 +152,7 @@
     display: block;
     vertical-align: middle;
     margin: auto;
-    width: 50%;
+    width: 35%;
 }
 
 @media screen and (max-width:600px) {
@@ -190,17 +187,57 @@ body.galerie {
             margin-top: $spacing-el;
             div {
                 position: relative;
+                margin: 10px;
                 flex-basis: 30%;
-                div {
+                .img_hover {
                     position: absolute;
-                    bottom: 0;
+                    top: 0;
                     left: 0;
                     background-color: rgba(0, 0, 0, 0.7);
                     color: #FFF;
                     margin: 0;
                     width: 100%;
-                    height: 100%;
+                    height: 30%;
                     display: none;
+                    p {
+                        //font-size: 16px;
+                        line-height: 1.5;
+                        //margin: 0;
+                    }
+                    &__title {
+                        font-size: $font-content+px;
+                        text-transform: uppercase;
+                        margin: 5px 0 10px 12px;
+                        font-family: $oswaldMedium;
+                    }
+                    &__technique {
+                        margin: 0 0 5px 24px;
+                        font-size: 20px;
+                        &:before {
+                            display: inline-block;
+                            content: "";
+                            width: 24px;
+                            height: 24px;
+                            background-image: url('../images/tech.png');
+                            background-repeat: no-repeat;
+                            color: #FFF;
+                            margin-right: 10px;
+                        }
+                    }
+                    &__size {
+                        margin: 0 0 0 24px;
+                        font-size: 20px;
+                        &:before {
+                            display: inline-block;
+                            content: "";
+                            width: 24px;
+                            height: 24px;
+                            background-image: url('../images/size.png');
+                            background-repeat: no-repeat;
+                            color: #FFF;
+                            margin-right: 10px;
+                        }
+                    }
                 }
                 &:hover .img_hover {
                     display: block;

@@ -129,7 +129,7 @@ dl:last-of-type {
         background-color: $bleu2;
         color: $bleu3;
         font-family: $oswaldRegular;
-        max-width: 1000px;
+        max-width: 600px;
         padding: 0 15px;
         span {
             display: block;
@@ -139,12 +139,26 @@ dl:last-of-type {
             background-size: cover;
             margin: 0 -15px 0 -15px;
         }
-    }
-    .container-media {
-        display: block;
+        dt:first-of-type {
+            margin-top: 0;
+        }
+        #trombino {
+            figure {
+                height: 561px;
+            }
+        }
     }
 }
 
+// @media (max-width:660px) {
+//     dl {
+//         #trombino {
+//             figure {
+//                 height: auto !important;
+//             }
+//         }
+//     }
+// }
 @media (max-width:1576px) {
     dl {
         margin: 0 0 0 5%;
@@ -181,7 +195,7 @@ article section+section {
 }
 
 dt:first-of-type {
-    margin-top: ($spacing-unit)+2;
+    margin-top: ($spacing-unit*2)+2;
 }
 
 dt:not(:first-of-type) {
@@ -202,6 +216,7 @@ dl {
     #trombino {
         figure {
             margin: 0 -15px 0 -15px;
+            height: auto;
             img {
                 width: 100%;
             }

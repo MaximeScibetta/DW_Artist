@@ -1,38 +1,38 @@
 // Create a lightbox
 (function() {
-  var $lightbox = $("<div class='lightbox'></div>");
-  var $img = $("<img>");
-  var $caption = $("<p class='caption'></p>");
+    var $lightbox = $("<div class='lightbox'></div>");
+    var $img = $("<img>");
+    var $caption = $("<p class='caption'></p>");
 
-  // Add image and caption to lightbox
+    // Add image and caption to lightbox
 
-  $lightbox
-    .append($img)
-    .append($caption);
+    $lightbox
+        .append($img)
+        .append($caption);
 
-  // Add lighbox to document
+    // Add lighbox to document
 
-  $('body').append($lightbox);
+    $('body').append($lightbox);
 
-  $('.gallerie img').click(function(e) {
-    e.preventDefault();
+    $('.gallerie img').click(function(e) {
+        e.preventDefault();
 
-    // Get image link and description
-    var src = $(this).attr("src");
-    var cap = $(this).attr("alt");
+        // Get image link and description
+        var src = $(this).attr("src");
+        var cap = $(this).attr("alt");
 
-    // Add data to lighbox
+        // Add data to lighbox
 
-    $img.attr('src', src);
-    $caption.text(cap);
+        $img.attr('src', src);
+        $caption.text(cap);
 
-    // Show lightbox
+        // Show lightbox
 
-    $lightbox.fadeIn('fast');
+        $lightbox.fadeIn('fast');
 
-    $lightbox.click(function() {
-      $lightbox.fadeOut('fast');
+        $lightbox.click(function() {
+            $lightbox.fadeOut('fast');
+        });
     });
-  });
 
 }());

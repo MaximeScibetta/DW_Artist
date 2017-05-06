@@ -1,32 +1,42 @@
-
-    //Fonts-size
-
+//Fonts-size
 $font-base: 16;
-
 $font-micro: 0.75em;
 $font-content: $font-base * 1.5;
 $font-lvl1: $font-content * 1.5;
 $font-lvl2: $font-lvl1 * 1.5;
 $font-lvl3: $font-lvl2 * 1.5;
-
 //Fonts-family
-$oswaldELight: "Oswald-ExtraLight", "SourceSansPro-ExtraLight", sans-serif;
-$oswaldLight: "Oswald-Light", "SourceSansPro-Light", sans-serif;
-$oswaldRegular: "Oswald-Regular", "SourceSansPro-Regular", sans-serif;
-$oswaldBold: "Oswald-Bold", "SourceSansPro-Bold", sans-serif;
-
-$sspLight: "SourceSansPro-Light", "Oswald-Light", sans-serif;
-$sspRegular: "SourceSansPro-Regular", "Oswald-Regular", sans-serif;
-$sspBold: "SourceSansPro-Bold", "Oswald-Bold", sans-serif;
-
+$oswaldELight: "Oswald-ExtraLight",
+"SourceSansPro-ExtraLight",
+sans-serif;
+$oswaldLight: "Oswald-Light",
+"SourceSansPro-Light",
+sans-serif;
+$oswaldRegular: "Oswald-Regular",
+"SourceSansPro-Regular",
+sans-serif;
+$oswaldBold: "Oswald-Bold",
+"SourceSansPro-Bold",
+sans-serif;
+$oswaldMedium: 'Oswald-Medium',
+"SourceSansPro-Regular",
+sans-serif;
+$sspLight: "SourceSansPro-Light",
+"Oswald-Light",
+sans-serif;
+$sspRegular: "SourceSansPro-Regular",
+"Oswald-Regular",
+sans-serif;
+$sspBold: "SourceSansPro-Bold",
+"Oswald-Bold",
+sans-serif;
 //Spacing
 $spacing-unit: 12px;
 $spacing-el: 48px;
-
 //Padding
 $input-padding: 10px 6px 10px 6px;
-@media screen and (max-width:750px){
-    $font-base : 12;
+@media screen and (max-width:750px) {
+    $font-base: 12;
     $spacing-unit: 8px;
     $spacing-el: 36px;
 }
