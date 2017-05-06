@@ -51,8 +51,10 @@
         $(`#${ $( this ).data( "gal-target" ) }`).addClass("here").removeClass("nothere");
     };
 
+
     // 2. Tab
     ($gallery = $("ul.nav a")).on("click", fChangeGal);
+
 
     /**************/
     // Sidebar Menu
