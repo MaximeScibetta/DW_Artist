@@ -18,7 +18,10 @@
                 <h1>
                     Pascale Dupont
                 </h1>
-                <nav class="nav-effect">
+                <button id="menu" type="button">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <nav class="nav-effect sidebar">
                     <h2 class="visuallyhidden">Menu de navigation</h2>
                     <a href="../index.html" data-hover="Biographie">
                         <span>Biographie</span>
@@ -44,33 +47,46 @@
                 </h1>
                 <div class="container-media" id="container">
                     <ul class="nav">
+                        <div id="anim">
+                            <span class="tooltip" data-tooltip="Survoler les images pour en savoir plus !">?</span>
+                        </div>
                         <li class="active"><a href="#" data-gal-target="ambiance">Ambiance</a></li>
                         <li><a href="#" data-gal-target="foule">Foule</a></li>
                         <li><a href="#" data-gal-target="portrait">Portrait</a></li>
                     </ul>
                     <div class="gallerie here" id="ambiance">
-                        <div><img src="../images/ambiance1.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
-                        <div><img src="../images/ambiance1.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
-                        <div><img src="../images/ambiance1.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
-                        <div><img src="../images/ambiance1.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
-                        <div><img src="../images/ambiance1.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
-                        <div><img src="../images/ambiance1.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
+                        <div>
+                            <img src="../images/ambiance1.jpg" alt="Peinture de Pascale Dupont de genre ambiance">
+                        </div>
+                        <div>
+                            <img src="../images/ambiance2.jpg" alt="Peinture de Pascale Dupont de genre ambiance">
+                            <div class="img_hover">
+                                <p>Couché au soleil levant</p>
+                                <p>Oeuvre réalise en 2006</p>
+                                <p>Toile à l'huile</p>
+                                <p>100 cm. x 200 cm.</p>
+                            </div>
+                        </div>
+                        <div><img src="../images/ambiance3.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
+                        <div><img src="../images/ambiance4.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
+                        <div><img src="../images/ambiance5.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
+                        <div><img src="../images/ambiance6.jpg" alt="Peinture de Pascale Dupont de genre ambiance"></div>
                     </div>
                     <div class="gallerie nothere" id="portrait">
                         <div><img src="../images/portrait1.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
-                        <div><img src="../images/portrait1.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
-                        <div><img src="../images/portrait1.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
-                        <div><img src="../images/portrait1.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
-                        <div><img src="../images/portrait1.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
-                        <div><img src="../images/portrait1.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
+                        <div><img src="../images/portrait2.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
+                        <div><img src="../images/portrait3.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
+                        <div><img src="../images/portrait4.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
+                        <div><img src="../images/portrait5.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
+                        <div><img src="../images/portrait6.jpg" alt="Peinture de Pascale Dupont de genre portrait"></div>
                     </div>
                     <div class="gallerie nothere" id="foule">
                         <div><img src="../images/foulle1.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
-                        <div><img src="../images/foulle1.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
-                        <div><img src="../images/foulle1.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
-                        <div><img src="../images/foulle1.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
-                        <div><img src="../images/foulle1.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
-                        <div><img src="../images/foulle1.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
+                        <div><img src="../images/foulle2.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
+                        <div><img src="../images/foulle3.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
+                        <div><img src="../images/foulle4.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
+                        <div><img src="../images/foulle5.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
+                        <div><img src="../images/foulle6.jpg" alt="Peinture de Pascale Dupont de genre foulle"></div>
                     </div>
                     <!--<div class="gallery here flex_container" id="ambiance">
                         <ul class="m">
@@ -159,6 +175,28 @@
     <script src="../js/jquery-3.2.0.min.js"></script>
     <script src="../js/gallery.js"></script>
     <script src="../js/homeGallery.js"></script>
+
+    <script>
+        (function() {
+            let sidebarOpened = false
+            let button = document.querySelector('#menu')
+
+            button.addEventListener('click', function(e) {
+                e.stopPropagation()
+                e.preventDefault()
+                document.body.classList.add('has-sidebar')
+                sidebarOpened = true
+            })
+
+
+            document.body.addEventListener('click', function() {
+                if (sidebarOpened) {
+                    document.body.classList.remove('has-sidebar')
+                }
+            })
+
+        })()
+    </script>
 </body>
 
 </html>

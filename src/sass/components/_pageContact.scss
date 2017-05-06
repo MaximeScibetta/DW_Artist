@@ -5,10 +5,10 @@ form.contact {
     //width: 400px;
     display: inline-block;
     label {
-        @include rhythm($font-content, 36);
+        @include rhythm($font-lvl1, 30);
         color: $bleu3;
     }
-    label:not(::first-of-type) {
+    label:not(:first-of-type) {
         margin-top: $spacing-unit*3;
     }
     input,
@@ -152,7 +152,7 @@ div.contact-wrapper {
 
 .contact-social {
     position: absolute;
-    bottom: 90px;
+    bottom: 100px;
     right: 0;
     font-size: 2.3rem;
     li {

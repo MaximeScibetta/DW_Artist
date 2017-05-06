@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Scibetta Maxime">
@@ -9,43 +10,47 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body class="contact">
     <div class="wrapper">
         <div class="wrapper__content">
-        <header id="header" class="header">
-            <h1>
-                Pascale Dupont
-            </h1>
-            <nav class="nav-effect">
-                <h2 class="visuallyhidden">Menu de navigation</h2>
-                <a href="../index.html" data-hover="Biographie">
-                    <span>Biographie</span>
-                </a>
-                <a href="./galerie.html" data-hover="Galerie">
-                    <span>Galerie</span>
-                </a>
-                <a href="./event.html" data-hover="Événements">
-                    <span>Événements</span>
-                </a>
-                <a href="./lien.html" data-hover="Liens">
-                    <span>Liens</span>
-                </a>
-                <a href="./contact.html" data-hover="Contact">
-                    <span>Contact</span>
-                </a>
-            </nav>
-        </header>
-        <section class="contact">
-            <h2 id="hidden">Contact Pascale Dupont</h2>
-            <div class="contact-wrapper" id="contact">
-                <form action="post" class="contact">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" value="" placeholder="Votre nom">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" value="" placeholder="Votre email">
-                    <label for="message">Votre message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
-                    <button class="send-button" id="submit" type="submit" value="Envoyer">
+            <header id="header" class="header">
+                <h1>
+                    Pascale Dupont
+                </h1>
+                <button id="menu" type="button">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <nav class="nav-effect sidebar">
+                    <h2 class="visuallyhidden">Menu de navigation</h2>
+                    <a href="../index.html" data-hover="Biographie">
+                        <span>Biographie</span>
+                    </a>
+                    <a href="./galerie.html" data-hover="Galerie">
+                        <span>Galerie</span>
+                    </a>
+                    <a href="./event.html" data-hover="Événements">
+                        <span>Événements</span>
+                    </a>
+                    <a href="./lien.html" data-hover="Liens">
+                        <span>Liens</span>
+                    </a>
+                    <a href="./contact.html" data-hover="Contact">
+                        <span>Contact</span>
+                    </a>
+                </nav>
+            </header>
+            <section class="contact">
+                <h2 id="hidden">Contact Pascale Dupont</h2>
+                <div class="contact-wrapper" id="contact">
+                    <form action="post" class="contact">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" value="" placeholder="Votre nom">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" value="" placeholder="Votre email">
+                        <label for="message">Votre message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+                        <button class="send-button" id="submit" type="submit" value="Envoyer">
                     <div class="button">
                         <span class="send-text">Envoyer</span>
                         <i class="send-icon"></i>
@@ -90,5 +95,26 @@
         </footer>
         </div>
     </div>
+     <script>
+        (function() {
+            let sidebarOpened = false
+            let button = document.querySelector('#menu')
+
+            button.addEventListener('click', function(e) {
+                e.stopPropagation()
+                e.preventDefault()
+                document.body.classList.add('has-sidebar')
+                sidebarOpened = true
+            })
+
+
+            document.body.addEventListener('click', function() {
+                if (sidebarOpened) {
+                    document.body.classList.remove('has-sidebar')
+                }
+            })
+
+        })()
+    </script>
 </body>
 </html>
