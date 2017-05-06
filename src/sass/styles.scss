@@ -181,6 +181,7 @@ dl:last-of-type {
         float: left;
         margin-right: $spacing-unit*2;
         width: 40%;
+        min-width: 20%;
     }
     p {
         font-family: 'baskerville';

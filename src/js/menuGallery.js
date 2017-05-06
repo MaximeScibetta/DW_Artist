@@ -7,11 +7,6 @@
  */
 let $gallery;
 
-// const fChangeGal = function ( oEvent ) {
-//     oEvent.preventDefault();
-//     console.log($( $gallery );
-//     $( `#${ ( gallery ).data( "gal-target" ) }` ).addClass( "here" );
-// };
 const fChangeGal = function(oEvent) {
     oEvent.preventDefault();
 
