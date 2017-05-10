@@ -65,10 +65,10 @@
     button.addEventListener('click', function(e) {
         e.stopPropagation()
         e.preventDefault()
-        document.body.classList.add('has-sidebar')
+        document.body.classList.toggle('has-sidebar')
+        button.classList.add('open')
         sidebarOpened = true
-    })
-
+    });
 
     document.body.addEventListener('click', function() {
         if (sidebarOpened) {

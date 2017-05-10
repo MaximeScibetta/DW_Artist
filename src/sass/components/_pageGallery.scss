@@ -122,13 +122,23 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
     .gallerie {
         flex-direction: column;
         align-items: center;
     }
     .lightbox>div {
         margin-bottom: 10px;
+    }
+    #anim,
+    .container-media .nav li {
+        display: block;
+    }
+    #anim {
+        margin-bottom: 20px;
+    }
+    .container-media .nav {
+        margin-top: 50px;
     }
 }
 
@@ -150,7 +160,7 @@
 
 .lightbox img {
     display: block;
-    vertical-align: middle;
+    vertical-align: center;
     margin: auto;
     width: 35%;
 }
@@ -167,8 +177,9 @@
     text-align: center;
     font-size: 1em;
     line-height: 1.5;
-    font-weight: 700;
+    //font-weight: 700;
     color: #eee;
+    letter-spacing: 1px;
 }
 
 .here {
