@@ -18,6 +18,19 @@
     }
 }
 
+.container-media {
+    width: 90%;
+    margin: 0 auto;
+    .nav {
+        margin: $spacing-el*2 0 $spacing-el;
+    }
+    .gallerie {
+        ul {
+            @include flexbin(500px, 20px);
+        }
+    }
+}
+
 .tooltip {
     position: relative;
     background: #60404f;
@@ -91,57 +104,52 @@
 
 /*GALLERIE SMARTPHON*/
 
-.container-media {
-    max-width: 800px;
-    margin: 5% auto;
-    padding: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
-    box-shadow: 0 0 5px $red;
-    position: relative;
-}
-
-.text-center {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.gallerie {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallerie div>img {
-    max-width: 100%;
-    display: block;
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-@media only screen and (max-width: 490px) {
-    .gallerie {
-        flex-direction: column;
-        align-items: center;
-    }
-    .lightbox>div {
-        margin-bottom: 10px;
-    }
-    #anim,
-    .container-media .nav li {
-        display: block;
-    }
-    #anim {
-        margin-bottom: 20px;
-    }
-    .container-media .nav {
-        margin-top: 50px;
-    }
-}
-
+// .container-media {
+//     max-width: 800px;
+//     margin: 5% auto;
+//     padding: 20px;
+//     border-radius: 10px;
+//     overflow: hidden;
+//     box-sizing: border-box;
+//     box-shadow: 0 0 5px $red;
+//     position: relative;
+// }
+// .text-center {
+//     text-align: center;
+//     margin-bottom: 1em;
+// }
+// .gallerie {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
+// }
+// .gallerie div>img {
+//     max-width: 100%;
+//     display: block;
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
+// @media only screen and (max-width: 490px) {
+//     .gallerie {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     .lightbox>div {
+//         margin-bottom: 10px;
+//     }
+//     #anim,
+//     .container-media .nav li {
+//         display: block;
+//     }
+//     #anim {
+//         margin-bottom: 20px;
+//     }
+//     .container-media .nav {
+//         margin-top: 50px;
+//     }
+// }
 
 /*Lighbox CSS*/
 
@@ -190,94 +198,92 @@
     display: none;
 }
 
-body.galerie {
-    .container-media {
-        max-width: 80%;
-        margin: $spacing-el auto 0;
-        .gallerie {
-            margin-top: $spacing-el;
-            div {
-                position: relative;
-                margin: 10px;
-                flex-basis: 30%;
-                .img_hover {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background-color: rgba(0, 0, 0, 0.7);
-                    color: #FFF;
-                    margin: 0;
-                    width: 100%;
-                    height: 150px;
-                    display: none;
-                    p {
-                        //font-size: 16px;
-                        line-height: 1.5;
-                        //margin: 0;
-                    }
-                    &__title {
-                        font-size: $font-content+px;
-                        text-transform: uppercase;
-                        margin: 5px 0 10px 12px;
-                        font-family: $oswaldMedium;
-                    }
-                    &__technique {
-                        margin: 0 0 5px 24px;
-                        font-size: 20px;
-                        &:before {
-                            display: inline-block;
-                            content: "";
-                            width: 24px;
-                            height: 24px;
-                            background-image: url('../images/tech.png');
-                            background-repeat: no-repeat;
-                            color: #FFF;
-                            margin-right: 10px;
-                        }
-                    }
-                    &__size {
-                        margin: 0 0 0 24px;
-                        font-size: 20px;
-                        &:before {
-                            display: inline-block;
-                            content: "";
-                            width: 24px;
-                            height: 24px;
-                            background-image: url('../images/size.png');
-                            background-repeat: no-repeat;
-                            color: #FFF;
-                            margin-right: 10px;
-                        }
-                    }
-                }
-                &:hover .img_hover {
-                    display: block;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1200px) {
-    body.galerie {
-        .container-media {
-            .gallerie {
-                div {
-                    flex-basis: 45%;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 750px) {
-    body.galerie {
-        .container-media {
-            .gallerie {
-                div {
-                    flex-basis: 100%;
-                }
-            }
-        }
-    }
-}
+// body.galerie {
+//     .container-media {
+//         max-width: 80%;
+//         margin: $spacing-el auto 0;
+//         .gallerie {
+//             margin-top: $spacing-el;
+//             div {
+//                 position: relative;
+//                 margin: 10px;
+//                 flex-basis: 30%;
+//                 .img_hover {
+//                     position: absolute;
+//                     top: 0;
+//                     left: 0;
+//                     background-color: rgba(0, 0, 0, 0.7);
+//                     color: #FFF;
+//                     margin: 0;
+//                     width: 100%;
+//                     height: 150px;
+//                     display: none;
+//                     p {
+//                         //font-size: 16px;
+//                         line-height: 1.5;
+//                         //margin: 0;
+//                     }
+//                     &__title {
+//                         font-size: $font-content+px;
+//                         text-transform: uppercase;
+//                         margin: 5px 0 10px 12px;
+//                         font-family: $oswaldMedium;
+//                     }
+//                     &__technique {
+//                         margin: 0 0 5px 24px;
+//                         font-size: 20px;
+//                         &:before {
+//                             display: inline-block;
+//                             content: "";
+//                             width: 24px;
+//                             height: 24px;
+//                             background-image: url('../images/tech.png');
+//                             background-repeat: no-repeat;
+//                             color: #FFF;
+//                             margin-right: 10px;
+//                         }
+//                     }
+//                     &__size {
+//                         margin: 0 0 0 24px;
+//                         font-size: 20px;
+//                         &:before {
+//                             display: inline-block;
+//                             content: "";
+//                             width: 24px;
+//                             height: 24px;
+//                             background-image: url('../images/size.png');
+//                             background-repeat: no-repeat;
+//                             color: #FFF;
+//                             margin-right: 10px;
+//                         }
+//                     }
+//                 }
+//                 &:hover .img_hover {
+//                     display: block;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 1200px) {
+//     body.galerie {
+//         .container-media {
+//             .gallerie {
+//                 div {
+//                     flex-basis: 45%;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 750px) {
+//     body.galerie {
+//         .container-media {
+//             .gallerie {
+//                 div {
+//                     flex-basis: 100%;
+//                 }
+//             }
+//         }
+//     }
+// }
