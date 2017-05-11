@@ -99,3 +99,58 @@
         setInterval(fHandleTrombino, 2500);
     });
 }());
+
+/**************/
+// Formulaire
+/**************/
+
+// (function() {
+//     "use strict";
+//     var fieldEmpty = /^$/;
+//     var fieldNameSurname = /^([^\s]|[^\s].*[^\s])\s[^\s]+$/;
+//     var fieldEmail = /[A-Za-z0-9._%+\\-]+@[A-Za-z0-9._%+\\-]+\.[A-Za-z]{2,}$/;
+
+
+//     var fVerifInputEmail = function(e) {
+//         e.currentTarget.parentNode.parentNode.querySelector(".info").classList.remove("on");
+//         if (!fieldEmail.test(document.getElementById("email").value)) {
+//             e.currentTarget.parentNode.parentNode.querySelector(".error").classList.add("on");
+//         }
+//     };
+//     var fVerifInputname = function(e) {
+//         e.currentTarget.parentNode.parentNode.querySelector(".info").classList.remove("on");
+//         if (!fieldNameSurname.test(document.getElementById("name").value)) {
+//             e.currentTarget.parentNode.parentNode.querySelector(".error").classList.add("on");
+//         }
+//     };
+//     var fFocusOnInput = function(e) {
+//         //ajoute une classe "on" au div de la classe "info" correspondant à l'input qui vient de recevoir le focus
+//         e.currentTarget.parentNode.parentNode.querySelector(".info").classList.add("on");
+
+//         //elle supprime les classes "on" aux div de la classe "error"
+//         e.currentTarget.parentNode.parentNode.querySelector(".error").classList.remove("on");
+
+//         //et de la classe "atSubmit" correspondants au champ qui vient de recevoir le focus,
+//         //afin que le message d'une éventuelle ancienne erreur soir rendu invisible.
+//         e.currentTarget.parentNode.parentNode.querySelector(".atSubmit").classList.remove("on");
+//     };
+//     var fPageIsLoaded = function() {
+//         // code pour démarrer le script ici
+
+//         //fFocusOnInput
+//         document.getElementById("pays").addEventListener("focus", fFocusOnInput, false);
+//         document.getElementById("telFix").addEventListener("focus", fFocusOnInput, false);
+//         document.getElementById("conf").addEventListener("focus", fFocusOnInput, false);
+
+//         //fVerifInputname
+//         document.getElementById("name").addEventListener("focus", fFocusOnInput, false);
+//         document.getElementById("name").addEventListener("blur", fVerifInputname, false);
+
+//         //fVerifInputEmail
+//         document.getElementById("email").addEventListener("focus", fFocusOnInput, false);
+//         document.getElementById("email").addEventListener("blur", fVerifInputEmail, false);
+//     };
+
+//     //gestion de l'événement "load" pour démarrer le script
+//     window.addEventListener("load", fPageIsLoaded, false);
+// }());

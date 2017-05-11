@@ -1,4 +1,6 @@
-*, *:after, *::before {
+*,
+*:after,
+*::before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -19,15 +21,16 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
-    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
     @include rhythm($font-content, 36);
 }
 
-.nav-effect a:hover, .nav-effect a:focus {
+.nav-effect a:hover,
+.nav-effect a:focus {
     outline: none;
 }
 
-.nav-effect  {
+.nav-effect {
     //position: relative;
     display: inline-block;
     margin-left: $spacing-el * 2;
@@ -40,7 +43,7 @@ nav {
 
 .nav-effect a span {
     display: block;
-    padding: $spacing-unit $spacing-unit*2;
+    padding: $spacing-unit 23px;
     background-color: $bleu3;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
@@ -57,7 +60,7 @@ nav {
     width: 100%;
     height: 100%;
     background: $base-bcg-color;
-    color:$bleu3;
+    color: $bleu3;
     font-weight: 400;
     content: attr(data-hover);
     -webkit-transition: -webkit-transform 0.3s;
@@ -66,19 +69,22 @@ nav {
     -webkit-transform: translateX(-100%);
 }
 
-.nav-effect a:hover span, .nav-effect a:focus span {
+.nav-effect a:hover span,
+.nav-effect a:focus span {
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     transform: translateX(100%);
 }
 
-.nav-effect a:hover::before, .nav-effect a:focus::before {
+.nav-effect a:hover::before,
+.nav-effect a:focus::before {
     -webkit-transform: translateX(0%);
     -moz-transform: translateX(0%);
     transform: translateX(0%);
 }
-@media screen and (max-width:900px){
-    $font-base : 12;
+
+@media screen and (max-width:905px) {
+    $font-base: 12;
     $font-content: $font-base * 1.5;
     $font-lvl1: $font-content * 1.5;
     $font-lvl2: $font-lvl1 * 1.5;
@@ -86,34 +92,45 @@ nav {
     $spacing-unit: 8px;
     $spacing-el: 36px;
     .nav-effect a::before {
-        padding: $spacing-unit $spacing-unit*2;}
+        padding: $spacing-unit $spacing-unit*2;
+    }
     .nav-effect a span {
-    padding: $spacing-unit $spacing-unit*2;}
+        padding: $spacing-unit $spacing-unit*2;
+    }
     .nav-effect a {
-    margin: $spacing-unit*2 $spacing-unit*2;
-    @include rhythm($font-content, 36);}
-    .nav-effect  {
-        margin-left: $spacing-el * 2;}
+        margin: $spacing-unit*2 $spacing-unit*2;
+        @include rhythm($font-content, 36);
+    }
+    .nav-effect {
+        margin-left: $spacing-el * 2;
+    }
 }
-@media screen and (max-width:726px){
+
+@media screen and (max-width:726px) {
     .nav-effect a {
-        margin: $spacing-unit $spacing-unit;}
+        margin: $spacing-unit $spacing-unit;
+    }
 }
-@media screen and (max-width:686px){
+
+@media screen and (max-width:686px) {
     .nav-effect a {
-        margin: $spacing-unit/2 $spacing-unit/2;}
+        margin: $spacing-unit/2 $spacing-unit/2;
+    }
 }
-@media screen and (max-width:626px){
+
+@media screen and (max-width:626px) {
     .nav-effect a {
-       display: block;
-       margin:$spacing-unit auto;
-       width: 75%;}
-    h1{
-     @include rhythm($font-lvl3, 100);
-     }
+        display: block;
+        margin: $spacing-unit auto;
+        width: 75%;
+    }
+    h1 {
+        @include rhythm($font-lvl3, 100);
+    }
 }
-@media screen and (max-width:500px){
-     h1{
-     @include rhythm($font-lvl3, 75);
-     }
+
+@media screen and (max-width:500px) {
+    h1 {
+        @include rhythm($font-lvl3, 75);
+    }
 }
