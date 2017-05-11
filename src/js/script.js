@@ -96,7 +96,7 @@
     $(function() {
         $trombinoFigures = $("#trombino figure");
         $trombinoFigures.hide().first().show();
-        setInterval(fHandleTrombino, 2500);
+        setInterval(fHandleTrombino, 5000);
     });
 }());
 

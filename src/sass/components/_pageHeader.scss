@@ -1,8 +1,26 @@
-.header {
-    min-height: 213px;
+.headeer {
+    min-height: 500px;
+    overflow-y: hidden;
+    position: relative;
+    background-image: url(../images/intro4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
     h1 {
         font-family: 'script';
         display: inline-block;
+        margin-left: $spacing-el*2;
+    }
+    &:before {
+        display: block;
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        z-index: -1;
     }
 }
 
@@ -25,13 +43,13 @@ body {
 
 @media (max-width:629px) {
     body {
-    overflow-x: hidden;
-}
-    .header{
+        overflow-x: hidden;
+    }
+    .header {
         min-height: inherit;
         position: relative;
         margin-bottom: $spacing-el;
-        h1{
+        h1 {
             text-align: inherit !important;
             display: block !important;
             font-size: 13vw !important;
@@ -49,7 +67,7 @@ body {
         transform: translateX(0);
         transition: transform 0.3s;
         z-index: 10;
-        a{
+        a {
             display: block;
         }
     }
@@ -68,14 +86,14 @@ body {
         span:before {
             display: inline-block;
             font-family: 'Icon';
-            font-size:15vw;
+            font-size: 15vw;
             //height: 50px;
             //width: 50px;
             content: '\e9bd';
             color: $bleu3;
         }
     }
-    .nav-effect a{
+    .nav-effect a {
         display: block;
     }
 }

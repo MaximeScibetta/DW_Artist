@@ -1,0 +1,39 @@
+.home {
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: $spacing-el;
+        img {
+            flex-basis: 10%;
+        }
+        .biography {
+            flex-basis: 35%;
+            #first {
+                margin: -10px 0 0 0;
+            }
+        }
+        .parcours {
+            flex-basis: 35%;
+            dl {
+                padding: $spacing-el;
+                background-color: $bleu3;
+                color: #FFF;
+                dt {
+                    @include rhythm($font-lvl1, $font-lvl1*2);
+                    &:last-of-type {
+                        margin-top: $spacing-el;
+                    }
+                }
+                dd {
+                    @include rhythm($font-content, $font-content*1.5);
+                    &:not(:last-of-type) {
+                        margin-bottom: $spacing-unit*3;
+                    }
+                }
+            }
+        }
+    }
+}

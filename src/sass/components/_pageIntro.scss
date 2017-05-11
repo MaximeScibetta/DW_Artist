@@ -1,0 +1,91 @@
+.intro {
+    .wrapper {
+        &__content {
+            margin: 0;
+            #header {
+                .nav-effect {
+                    display: block;
+                    padding-top: $spacing-el;
+                    margin: 0 auto;
+                    a::before {
+                        background: inherit;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    article {
+        margin-top: $spacing-el;
+        h1 {
+            font-family: 'script';
+            margin-left: $spacing-el*2;
+            font-size: 140px;
+        }
+        section {
+            p {
+                margin: 0;
+                margin-left: $spacing-el*2;
+                width: 900px;
+                line-height: 1.5;
+                font-size: 50px;
+                margin-top: $spacing-el;
+                margin-bottom: 100px;
+            }
+            a {
+                margin: 0;
+                margin-left: $spacing-el*2;
+                text-transform: uppercase;
+                font-size: 24px;
+                font-family: $oswaldMedium;
+                color: #FFF;
+            }
+            .btn {
+                background: #2980b9;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to top, #2c3e50, #2980b9);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                padding: $spacing-unit*2 $spacing-el*3;
+                &:hover {
+                    background: linear-gradient(to bottom, #2c3e50, #2980b9);
+                }
+            }
+            .btn-2 {
+                padding: $spacing-unit*2 $spacing-el*3;
+                border: 3px solid $bleu3;
+                color: $bleu3;
+                &:hover {
+                    background-color: rgba(0, 0, 0, .5);
+                    color: #FFF;
+                }
+            }
+            &+section {
+                position: absolute;
+                top: 0;
+                height: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                div#trombino {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:before {
+                        display: block;
+                        content: "";
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background-color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}

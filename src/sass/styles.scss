@@ -14,6 +14,7 @@
 /****tools***/
 
 @import 'tools/baseline';
+@import 'tools/flexGalery';
 
 /****settings***/
 
@@ -37,7 +38,9 @@
 @import 'components/pageHeader';
 @import 'components/pageContact';
 @import 'components/pageGallery';
+@import 'components/pageBio';
 @import 'components/siteNav';
+@import 'components/pageIntro';
 
 /****trumps****/
 
@@ -59,7 +62,7 @@
     margin: 0 auto;
     max-width: 2000px;
     &__content {
-        margin: 0 $spacing-el;
+        //margin: 0 $spacing-el;
     }
 }
 
@@ -88,206 +91,6 @@ body {
     background-color: $base-bcg-color;
     color: $bleu3;
     font-family: $oswaldLight;
-}
-
-dl:last-of-type {
-    padding-bottom: $spacing-unit*4;
-}
-
-@media (min-width:1439px) {
-    .home article {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: flex-start;
-    }
-    dl {
-        margin: 0 0 0 10%;
-        padding: 0 15px;
-        background-color: $bleu2;
-        color: $bleu3;
-        font-family: $oswaldRegular;
-        span {
-            display: block;
-            height: 400px;
-            background-image: url(../images/profil.jpg);
-            background-position-y: -110px;
-            background-size: cover;
-            margin: 0 -15px 0 -15px;
-        }
-    }
-}
-
-@media (max-width:1440px) {
-    .home article {
-        position: relative;
-    }
-    .biography {
-        margin: 0 auto;
-    }
-    dl {
-        margin: 50px auto 0 auto !important;
-        background-color: $bleu2;
-        color: $bleu3;
-        font-family: $oswaldRegular;
-        max-width: 600px;
-        padding: 0 15px;
-        span {
-            display: block;
-            height: 589px;
-            background-image: url(../images/profil.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0 -15px 0 -15px;
-        }
-        dt:first-of-type {
-            margin-top: 0;
-        }
-        #trombino {
-            figure {
-                height: 561px;
-            }
-        }
-    }
-}
-
-// @media (max-width:660px) {
-//     dl {
-//         #trombino {
-//             figure {
-//                 height: auto !important;
-//             }
-//         }
-//     }
-// }
-@media (max-width:1576px) {
-    dl {
-        margin: 0 0 0 5%;
-    }
-}
-
-@media (max-width:1440px) {
-    dl {
-        margin: 100px auto 0;
-    }
-}
-
-.biography {
-    max-width: 1000px;
-    border-left: 5px $bleu3 solid;
-    padding-left: 20px;
-    flex: 1.2;
-    align-self: flex-start;
-    img {
-        float: left;
-        margin-right: $spacing-unit*2;
-        width: 40%;
-        min-width: 20%;
-    }
-    p {
-        font-family: 'baskerville';
-    }
-    p#first {
-        margin-top: 0;
-    }
-}
-
-article section+section {
-    flex-basis: 40%;
-}
-
-dt:first-of-type {
-    margin-top: ($spacing-unit*2)+2;
-}
-
-dt:not(:first-of-type) {
-    margin-top: ($spacing-unit*4)-4;
-}
-
-dl {
-    // flex:2;
-    margin: 0 0 0 10%;
-    //max-width: 1000px;
-    //min-width: 900px;
-    padding: 0 15px;
-    //background-image: url('../images/portrait6.JPG');
-    //background-position-x: -50px;
-    background-color: $bleu3;
-    color: $base-bcg-color;
-    font-family: $oswaldRegular;
-    #trombino {
-        figure {
-            margin: 0 -15px 0 -15px;
-            height: auto;
-            img {
-                width: 100%;
-            }
-        }
-    }
-}
-
-dt:not(:first-child) {
-    margin-top: $spacing-unit*4+1;
-}
-
-dt {
-    @include rhythm($font-lvl1, $font-lvl1*2);
-    //margin-top:20px;
-}
-
-dd:first-of-type {
-    margin: 28px 0 0 $spacing-unit*2;
-    @include rhythm($font-content, $font-content*1.5);
-    //margin:$spacing-unit*3 0 0 $spacing-unit*2;
-    max-width: 500px;
-}
-
-dd {
-    @include rhythm($font-content, $font-content*1.5);
-    margin: $spacing-unit*3 0 0 $spacing-unit*2;
-    max-width: 500px;
-}
-
-dd:nth-child(6) {
-    margin-top: ($spacing-unit*2)-1;
-}
-
-@media (max-width:500px) {
-    $font-base: 12;
-    $font-content: $font-base * 1.5;
-    $font-lvl1: $font-content * 1.5;
-    $font-lvl2: $font-lvl1 * 1.5;
-    $font-lvl3: $font-lvl2 * 1.5;
-    $spacing-unit: 8px;
-    $spacing-el: 36px;
-    dt:first-of-type {
-        margin-top: ($spacing-unit)+2;
-    }
-    dt:not(:first-of-type) {
-        margin-top: ($spacing-unit*4)-4;
-    }
-    dt:not(:first-child) {
-        margin-top: $spacing-unit*4+1;
-    }
-    dt {
-        @include rhythm($font-lvl1, $font-lvl1*2);
-    }
-    dd:first-of-type {
-        margin: 15px 0 0 $spacing-unit*2;
-        @include rhythm($font-content, $font-content*1.5);
-    }
-    dd {
-        @include rhythm($font-content, $font-content*1.5);
-        margin: $spacing-unit*3 0 0 $spacing-unit*2;
-    }
-    dd:nth-child(6) {
-        margin-top: ($spacing-unit*2)-1;
-    }
-}
-
-@media screen and (max-width:380px) {
-    dl span {
-        background-position: center;
-    }
 }
 
 
