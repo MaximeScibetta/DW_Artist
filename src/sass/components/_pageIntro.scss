@@ -34,26 +34,23 @@
             }
             a {
                 margin: 0;
-                margin-left: $spacing-el*2;
                 text-transform: uppercase;
                 font-size: 24px;
                 font-family: $oswaldMedium;
                 color: #FFF;
             }
             .btn {
-                background: #2980b9;
-                /* fallback for old browsers */
-                background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);
-                /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to top, #2c3e50, #2980b9);
-                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                padding: $spacing-unit*2 $spacing-el*3;
+                margin-left: $spacing-el*2;
+                background: $bleu3;
+                color: #FFF;
+                padding: $spacing-unit*2+3 $spacing-el*3+3;
                 &:hover {
-                    background: linear-gradient(to bottom, #2c3e50, #2980b9);
+                    background: saturate($bleu3, 50%)
                 }
             }
             .btn-2 {
-                padding: $spacing-unit*2 $spacing-el*3;
+                margin-left: $spacing-el*2;
+                padding: $spacing-unit*2 $spacing-el*1.5;
                 border: 3px solid $bleu3;
                 color: $bleu3;
                 &:hover {

@@ -22,6 +22,7 @@
                 background-color: $bleu3;
                 color: #FFF;
                 dt {
+                    font-family: $oswaldRegular;
                     @include rhythm($font-lvl1, $font-lvl1*2);
                     &:last-of-type {
                         margin-top: $spacing-el;
