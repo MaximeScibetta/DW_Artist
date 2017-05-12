@@ -72,7 +72,7 @@
                         }
                     }
                     &__size {
-                        margin: 0 0 40px 24px;
+                        margin: 0 0 20px 24px;
                         font-size: 20px;
                         &:before {
                             display: inline-block;
@@ -87,18 +87,44 @@
                             margin-bottom: 0px;
                         }
                     }
-                    .btn {
+                    .btn-3 {
+                        // margin-left: $spacing-el/2;
+                        // text-transform: uppercase;
+                        // letter-spacing: 1px;
+                        // background: $bleu3;
+                        // color: #FFF;
+                        // padding: 2.5% 20%;
+                        // // position: absolute;
+                        // //top: 10px;
+                        // //right: 20px;
+                        // &:hover {
+                        //     background: saturate($bleu3, 50%)
+                        // }
+                        //margin-top: 30px;
                         margin-left: $spacing-el/2;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                        background: $bleu3;
-                        color: #FFF;
                         padding: 2.5% 20%;
-                        // position: absolute;
-                        //top: 10px;
-                        //right: 20px;
+                        text-decoration: none;
+                        background: transparent;
+                        border: 2px solid lighten(#FFF, 10%);
+                        color: lighten(#FFF, 10%);
+                        display: inline-block;
+                        position: relative;
+                        text-transform: uppercase;
+                        font-size: 24px;
+                        color: #FFF;
+                        @include prefix(border-radius,
+                        5px);
+                        @include prefix(transition,
+                        background .3s ease);
+                        @include prefix(box-shadow,
+                        2px 2px 0 lighten(#FFF,
+                        10%));
                         &:hover {
-                            background: saturate($bleu3, 50%)
+                            box-shadow: none;
+                            top: 2px;
+                            left: 2px;
+                            @include prefix(box-shadow,
+                            2px 2px 0 transparent);
                         }
                     }
                 }
