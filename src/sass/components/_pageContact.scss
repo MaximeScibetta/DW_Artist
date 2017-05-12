@@ -2,26 +2,28 @@ form.contact {
     //background-color: $bleu3;
     //padding: $spacing-el;
     //margin:$spacing-el auto 0;
-    //width: 400px;
+    width: 400px;
     display: inline-block;
     label {
         @include rhythm($font-lvl1, 30);
         color: $bleu3;
     }
     label:not(:first-of-type) {
-        margin-top: $spacing-unit*3;
+        margin-top: $spacing-el;
     }
     input,
     textarea {
         margin-top: $spacing-unit;
-        min-width: 300px;
+        //min-width: 300px;
         color: $bleu3;
         background-color: $base-bcg-color;
-        max-width: 400px;
+        //max-width: 100%;
         letter-spacing: 1px;
-        border-radius: 5px;
-        border: 1px solid $bleu3;
+        padding: 5px 0;
+        border-bottom: 3px solid $bleu3;
         font-family: sans-serif;
+        font-size: 20px;
+        width: 100%;
     }
     legend {
         @include rhythm($font-lvl1, 72);
@@ -99,8 +101,8 @@ ul.contact-info {
         display: inline-block;
         font-family: 'Icon';
         @include rhythm($font-lvl1, 72);
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         content: '\e947';
         margin-right: $spacing-unit*2;
     }
@@ -108,8 +110,8 @@ ul.contact-info {
         display: inline-block;
         font-family: 'Icon';
         @include rhythm($font-lvl1, 72);
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         content: '\e942';
         margin-right: $spacing-unit*2;
     }
@@ -117,8 +119,8 @@ ul.contact-info {
         display: inline-block;
         font-family: 'Icon';
         @include rhythm($font-lvl1, 72);
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         content: '\e945';
         margin-right: $spacing-unit*2;
     }
@@ -145,8 +147,8 @@ ul.contact-info {
 /*CONTACT SOCIAL*/
 
 div.contact-wrapper {
-    width: 770px;
-    margin: 0 auto;
+    width: 865px;
+    margin: $spacing-el*2 auto 0;
     position: relative;
 }
 

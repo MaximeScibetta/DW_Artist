@@ -1,10 +1,11 @@
 input,
 label,
-form{
+form {
     display: block;
 }
 
-input, textarea{
-    padding: $input-padding;
-    border:none;
+input,
+textarea {
+    //padding: $input-padding;
+    border: none;
 }

@@ -94,16 +94,6 @@ body {
 }
 
 
-/****Forms****/
-
-.contact {
-    & legend,
-    label {
-        color: #fff;
-    }
-}
-
-
 /****Events****/
 
 .event {
@@ -198,15 +188,3 @@ hr {
         }
     }
 }
-
-// article figure {
-//     position: relative;
-//     text-align: center;
-// }
-// article figure img {
-//     margin-bottom: 3px;
-// }
-// article figure figcaption {
-//     margin: 0 auto;
-//     display: inline-block;
-// }
